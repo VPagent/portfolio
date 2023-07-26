@@ -1,4 +1,11 @@
 :root {
   --body-dark-bcg-color: #18171c;
-  --header-bcg-color: rgba(0, 0, 0, 0.508);
+  --header-bcg-color: #2a3141;
+  --button-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.002),
+    0px 0px 5.3px rgba(0, 0, 0, 0.005), 0px 0px 10px rgba(0, 0, 0, 0.01),
+    0px 0px 17.9px rgba(0, 0, 0, 0.018), 0px 0px 33.4px rgba(0, 0, 0, 0.032),
+    0px 0px 80px rgba(0, 0, 0, 0.07);
+  --orange-color: orangered;
+  --font-varela: "Varela Round", sans-serif;
+  --font-syne: "Syne", sans-serif;
 }

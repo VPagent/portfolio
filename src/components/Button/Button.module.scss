@@ -1,0 +1,5 @@
+@import "../../static/sass/mixins.scss";
+
+.button {
+  @include Button();
+}

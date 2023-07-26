@@ -1,0 +1,97 @@
+.heroWrapper {
+  padding: 80px 0px;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photoArial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 350px;
+  height: 350px;
+  overflow-y: hidden;
+  margin-right: 0px;
+
+  border-radius: 50px;
+  background: linear-gradient(
+    150deg,
+    rgba(42, 49, 65, 1) 0%,
+    rgba(9, 25, 46, 1) 59%,
+    rgba(42, 49, 65, 1) 100%
+  );
+  box-shadow: 7px 7px 14px #686576, -7px -7px 14px #797575;
+}
+
+.myPhoto {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.textWrapper {
+  margin-top: 40px;
+  text-align: start;
+
+  font-family: var(--font-syne);
+  color: white;
+}
+
+.heroTitle {
+  font-size: 40px;
+  transition: opacity 250ms ease-in-out;
+}
+
+.orangeSpan {
+  color: var(--orange-color);
+}
+
+.heroText {
+  margin-top: 20px;
+
+  font-size: 26px;
+}
+
+.button {
+  margin-top: 40px;
+}
+
+.smallInfoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: 60px;
+
+  color: white;
+}
+
+.smallInfoBoxItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemTitle {
+  font-family: var(--font-syne);
+
+  font-size: 16px;
+}
+
+.itemText {
+  margin-top: 10px;
+  font-family: var(--font-varela);
+  font-size: 24px;
+  font-weight: 800;
+}

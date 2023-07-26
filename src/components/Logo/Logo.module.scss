@@ -1,10 +1,10 @@
 .logo {
   font-size: 20px;
-  font-family: "Varela Round", sans-serif;
+  font-family: var(--font-varela);
   color: rgb(100, 96, 96);
 }
 
 .logoSecondPart {
-  color: orangered;
+  color: var(--orange-color);
   font-weight: bold;
 }

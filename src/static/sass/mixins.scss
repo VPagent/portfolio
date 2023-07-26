@@ -1,0 +1,27 @@
+@mixin Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 24px;
+
+  border: none;
+  background-color: transparent;
+
+  border-radius: 10px;
+  background: #4b5773;
+  box-shadow: var(--button-shadow);
+
+  cursor: pointer;
+}
+
+@mixin ButtonIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
