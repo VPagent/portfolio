@@ -1,13 +1,13 @@
 import { FC } from "react";
 import "./App.css";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
-import HomePage from "./pages/HomePage/HomePage";
+import MainRoutes from "./components/MainRoutes/MainRoutes";
 
 const App: FC = () => {
   return (
     <div className="App">
       <SharedLayout>
-        <HomePage />
+        <MainRoutes />
       </SharedLayout>
     </div>
   );
