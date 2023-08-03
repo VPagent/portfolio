@@ -1,10 +1,10 @@
 import { FC, useRef } from "react";
 import styles from "./HeroSection.module.scss";
-import myPhoto from "../../static/images/MyPhoto.png";
+import myPhoto from "../../static/images/myPhoto1.jpg";
 import Button from "../Button/Button";
-import { useTransition, animated } from "@react-spring/web";
 import cn from "clsx";
 import Container from "../Container/Container";
+import DownloadCV from "../DownloadCV/DownloadCV";
 
 const HeroSection: FC = () => {
   const titleRef = useRef(null);
@@ -14,8 +14,11 @@ const HeroSection: FC = () => {
       <Container>
         <div className={styles.desktopMobileWrapper}>
           <div className={styles.imageWrapper}>
-            <div className={styles.photoArial}>
-              <img className={styles.myPhoto} src={myPhoto} alt="my photo" />
+            <div className={styles.photoAndCvWrapper}>
+              <DownloadCV className={styles.cvCircle} />
+              <div className={styles.photoArial}>
+                <img className={styles.myPhoto} src={myPhoto} alt="my photo" />
+              </div>
             </div>
           </div>
           <div className={styles.textWrapper}>
