@@ -1,43 +1,42 @@
 import axios from "axios";
 import { BASE_URL } from "../constants";
 
-const getSummary = async () => {
+export const getSummary = async () => {
   const { data } = await axios.get(`${BASE_URL}/summary`);
-
   return data;
 };
 
-const getSoftSkills = async () => {
+export const getSoftSkills = async () => {
   const { data } = await axios.get(`${BASE_URL}/softSkills`);
 
   return data;
 };
 
-const getTechSkills = async () => {
+export const getTechSkills = async () => {
   const { data } = await axios.get(`${BASE_URL}/techSkills`);
 
   return data;
 };
 
-const getEducation = async () => {
+export const getEducation = async () => {
   const { data } = await axios.get(`${BASE_URL}/education`);
 
   return data;
 };
 
-const getWorkExperience = async () => {
+export const getWorkExperience = async () => {
   const { data } = await axios.get(`${BASE_URL}/workExperience`);
 
   return data;
 };
 
-const getProjects = async () => {
+export const getProjects = async () => {
   const { data } = await axios.get(`${BASE_URL}/projects`);
 
   return data;
 };
 
-const getLanguages = async () => {
+export const getLanguages = async () => {
   const { data } = await axios.get(`${BASE_URL}/languages`);
 
   return data;

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./DownloadCV.module.scss";
 import cn from "clsx";
+import Icon from "../Icon/Icon";
 
 const textArray = [
   "D",
@@ -39,6 +40,13 @@ const DownloadCV: FC<Props> = ({ className }) => {
           </p>
         ))}
       </div>
+      <a
+        href="../assets/PavelVoloshynCV.pdf"
+        download
+        className={styles.cvLink}
+      >
+        <Icon name="download" className={styles.icon} />
+      </a>
     </div>
   );
 };

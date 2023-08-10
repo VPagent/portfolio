@@ -17,7 +17,7 @@ const Header: FC = () => {
         <div className={styles.headerBox}>
           <Logo />
           <div className={styles.headerControls}>
-            <Button onClick={() => navigate("/about")}>About me</Button>
+            {/* <Button onClick={() => navigate("/about")}>About me</Button> */}
             {/* <Button onClick={() => {}}>Portfolio</Button>
             <Button onClick={() => {}}>Contact me</Button>  */}
 
