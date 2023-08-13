@@ -1,0 +1,35 @@
+.menuList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.navLink {
+  width: 50%;
+  padding: 10px 0px;
+
+  transform: scale(1);
+  border-bottom: 2px solid var(--purple-color);
+  text-decoration: none;
+
+  font-family: var(--font-varela);
+  font-size: 20px;
+  color: white;
+
+  transition: padding var(--transition-duration) ease-in-out,
+    transform var(--transition-duration) ease-in-out,
+    color var(--transition-duration) ease-in-out;
+
+  &:hover {
+    padding-left: 20px;
+    transform: scale(1.05);
+  }
+
+  &:global(.active) {
+    padding-left: 20px;
+    transform: scale(1.05);
+    color: var(--purple-color);
+  }
+}

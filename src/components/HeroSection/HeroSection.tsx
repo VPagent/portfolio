@@ -1,13 +1,13 @@
-import { FC, useRef } from "react";
+import { FC } from "react";
 import styles from "./HeroSection.module.scss";
 import myPhoto from "../../static/images/myPhoto1.jpg";
 import Button from "../Button/Button";
-import cn from "clsx";
 import Container from "../Container/Container";
 import DownloadCV from "../DownloadCV/DownloadCV";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection: FC = () => {
-  const titleRef = useRef(null);
+  const navigate = useNavigate();
 
   return (
     <section className={styles.heroWrapper}>
@@ -23,7 +23,7 @@ const HeroSection: FC = () => {
           </div>
           <div className={styles.textWrapper}>
             <div>
-              <h1 ref={titleRef} className={cn(styles.heroTitle)}>
+              <h1 className={styles.heroTitle}>
                 Hey i'm <span className={styles.orangeSpan}>Pasha</span>
               </h1>
             </div>
@@ -35,7 +35,7 @@ const HeroSection: FC = () => {
             </p>
           </div>
         </div>
-        <Button className={styles.button} onClick={() => {}}>
+        <Button className={styles.button} onClick={() => navigate("/about")}>
           About me
         </Button>
         <div className={styles.smallInfoBox}>

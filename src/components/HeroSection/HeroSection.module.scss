@@ -22,13 +22,25 @@
   margin-right: 0px;
 
   border-radius: 50px;
-  background: linear-gradient(
-    150deg,
-    rgba(42, 49, 65, 1) 0%,
-    rgba(9, 25, 46, 1) 59%,
-    rgba(42, 49, 65, 1) 100%
-  );
-  box-shadow: rgb(3 3 3 / 35%) 0px 0px 20px 11px;
+
+  box-shadow: none;
+
+  transition: box-shadow 500ms ease-in-out;
+
+  animation: photoArialAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes photoArialAnimation {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: rgb(3 3 3 / 35%) 0px 0px 20px 11px;
+  }
 }
 
 .myPhoto {
@@ -75,8 +87,23 @@
 }
 
 .heroTitle {
-  font-size: 40px;
-  transition: opacity 250ms ease-in-out;
+  font-size: 38px;
+  transition: opacity 250ms ease-in-out,
+    transform var(--transition-duration) ease-in-out,
+    font-size var(--transition-duration) ease-in-out;
+
+  opacity: 0;
+  transform: translateY(-100%);
+
+  animation: heroTextAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    font-size: 40px;
+  }
 }
 
 .orangeSpan {
@@ -87,6 +114,32 @@
   margin-top: 20px;
 
   font-size: 26px;
+
+  opacity: 0;
+  transform: translateY(-100%);
+
+  transition: font-size var(--transition-duration) ease-in-out;
+
+  animation: heroTextAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    font-size: 28px;
+  }
+}
+
+@keyframes heroTextAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .button {
