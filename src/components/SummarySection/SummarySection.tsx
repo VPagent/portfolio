@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSummarySelector } from "../../redux/selectors";
 import { getMySummaryAction } from "../../redux/actions";
 import Container from "../Container/Container";
+import SummarySkeleton from "../SummarySkeleton/SummarySkeleton";
 
 const SummarySection: FC = () => {
   const dispatch = useDispatch();
@@ -18,8 +19,13 @@ const SummarySection: FC = () => {
     <section className={styles.sectionWrapper}>
       <Container>
         <div className={styles.contentWrapper}>
-          <div className={styles.textBox}>
-            <p className={styles.text}>{summary.eng}</p>
+          <SummarySkeleton>
+            {summary && <p className={styles.text}>{summary.eng}</p>}
+          </SummarySkeleton>
+          <div className={styles.openToWorkBox}>
+            <h2 className={styles.openToWorkText}>
+              I'm looking for job opportunities
+            </h2>
           </div>
         </div>
       </Container>
