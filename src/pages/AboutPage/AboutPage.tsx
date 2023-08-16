@@ -26,7 +26,7 @@ const AboutPage: FC = () => {
   return (
     <>
       <SummarySection summary={summary} />
-      <TechSkillsSection techSkills={techSkills} />
+      <TechSkillsSection skillsData={techSkills} />
     </>
   );
 };
