@@ -5,21 +5,18 @@ import { getSummarySelector } from "../../redux/selectors";
 import { getMySummaryAction } from "../../redux/actions";
 import Container from "../Container/Container";
 import SummarySkeleton from "../SummarySkeleton/SummarySkeleton";
+import { InitialSummary } from "../../redux/slices";
 
-const SummarySection: FC = () => {
-  const dispatch = useDispatch();
-  const summary = useSelector(getSummarySelector);
+type Props = {
+  summary: InitialSummary;
+};
 
-  useEffect(() => {
-    //@ts-ignore
-    dispatch(getMySummaryAction());
-  }, []);
-
+const SummarySection: FC<Props> = ({ summary }) => {
   return (
     <section className={styles.sectionWrapper}>
       <Container>
         <div className={styles.contentWrapper}>
-          <SummarySkeleton>
+          <SummarySkeleton loading={summary.loading}>
             {summary && <p className={styles.text}>{summary.eng}</p>}
           </SummarySkeleton>
           <div className={styles.openToWorkBox}>

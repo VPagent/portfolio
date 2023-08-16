@@ -1,14 +1,32 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import styles from "./AboutPage.module.scss";
-import Container from "../../components/Container/Container";
+
 import SummarySection from "../../components/SummarySection/SummarySection";
 import TechSkillsSection from "../../components/TechSkillsSection/TechSkillsSection";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getSummarySelector,
+  getTechSkillsSelector,
+} from "../../redux/selectors";
+import { getMySummaryAction, getMyTechSkillsAction } from "../../redux/actions";
 
 const AboutPage: FC = () => {
+  const dispatch = useDispatch();
+  const summary = useSelector(getSummarySelector);
+  const techSkills = useSelector(getTechSkillsSelector);
+
+  useEffect(() => {
+    //@ts-ignore
+    dispatch(getMySummaryAction());
+    //@ts-ignore
+    dispatch(getMyTechSkillsAction());
+
+    console.log(summary.loading);
+  }, []);
   return (
     <>
-      <SummarySection />
-      <TechSkillsSection />
+      <SummarySection summary={summary} />
+      <TechSkillsSection techSkills={techSkills} />
     </>
   );
 };

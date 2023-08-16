@@ -32,7 +32,7 @@ const summarySlice = createSlice({
       };
     },
     //@ts-ignore
-    [getMySummaryAction.pending]: (state, _) => {
+    [getMySummaryAction.rejected]: (state, _) => {
       state.loading = "error";
     },
   },

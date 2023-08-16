@@ -9,7 +9,7 @@ type Props = {
 const SummarySkeleton: FC<Props> = ({ children, loading }) => {
   return (
     <div className={styles.card}>
-      {children ? (
+      {!loading ? (
         children
       ) : (
         <>
