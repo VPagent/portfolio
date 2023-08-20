@@ -5,6 +5,18 @@
   min-height: 500px;
 }
 
+.sectionTitle {
+  margin-right: auto;
+
+  font-family: var(--font-varela);
+  font-size: 40px;
+  font-weight: 900;
+
+  background-image: var(--orange-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .contentWrapper {
   display: flex;
   flex-direction: column;
@@ -12,39 +24,106 @@
 }
 
 .loader {
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .cardsList {
   width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 20px;
 }
 
 .card {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+
+  width: calc((100% - 10px) / 2);
+
+  margin-top: 10px;
 
   background-color: #18181b;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1),
     0 0 0 1px rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 20px;
-  cursor: pointer;
+
   position: relative;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: scale(1) translateY(-50%);
+  opacity: 0;
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.015);
+  transition: transform var(--transition-duration) ease-in-out,
+    opacity var(--transition-duration) ease-in-out;
+
+  &:nth-child(3n) {
+    flex-direction: row;
+    width: 100%;
+    transform: scale(1) translateX(-50%);
+    animation: thirdCardAnimation;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+    .skillsImage {
+      margin-top: 0px;
+    }
   }
 
-  &:not(:first-of-type) {
-    margin-top: 20px;
+  &:nth-child(3n + 1) {
+    margin-right: 10px;
   }
+
+  &:hover .cardTitle,
+  &:hover .skillsImage {
+    transform: scale(1.05);
+  }
+
+  animation: cardAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes thirdCardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.cardTitle {
+  font-family: var(--font-syne);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+
+  transform: scale(1);
+  transition: transform var(--transition-duration) ease-in-out;
 }
 
 .skillsImage {
@@ -52,5 +131,82 @@
   width: 90px;
   height: auto;
 
-  margin-left: auto;
+  margin-top: 10px;
+
+  transform: scale(1);
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.softSkillsTitle {
+  margin-top: 40px;
+}
+
+.softSkillsList {
+  margin-top: 20px;
+}
+
+.softSkillsCard {
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+
+  pointer-events: none;
+}
+
+.softSkillsCard__contentWrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background-color: black;
+  background: linear-gradient(90deg, #222121 25%, #1f1d1d 40%, #181616e0 75%);
+  background-size: 200% 100%;
+  animation: bcgAnimation 4s infinite linear;
+}
+
+@keyframes bcgAnimation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.circle {
+  display: flex;
+
+  width: 20px;
+  height: 20px;
+
+  padding: 10px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  box-shadow: #e81cff 0px 7px 29px 0px;
+}
+
+.softSkillsText {
+  flex-grow: 1;
+  margin-left: 20px;
+  color: white;
+
+  text-align: start;
+  font-family: var(--font-varela);
+  font-size: 20px;
 }

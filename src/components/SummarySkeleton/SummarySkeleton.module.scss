@@ -12,7 +12,7 @@
 
   opacity: 0;
 
-  background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  background: var(--orange-gradient);
 
   transition: opacity var(--transition-duration) ease-in-out;
   animation: cardAnimation var(--transition-duration) alternate;
