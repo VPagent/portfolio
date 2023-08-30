@@ -3,6 +3,11 @@ import styles from "./Icon.module.scss";
 import cn from "clsx";
 import { ReactComponent as download } from "../../static/icons/download.svg";
 import { ReactComponent as close } from "../../static/icons/close.svg";
+import { ReactComponent as linkedin } from "../../static/icons/linkedin.svg";
+import { ReactComponent as telegram } from "../../static/icons/telegram.svg";
+import { ReactComponent as github } from "../../static/icons/github.svg";
+import { ReactComponent as phone } from "../../static/icons/phone.svg";
+import { ReactComponent as email } from "../../static/icons/email.svg";
 
 import html from "../../static/images/logos/icons8-html-96.png";
 import css from "../../static/images/logos/icons8-css-100.png";
@@ -25,21 +30,14 @@ import ukrainian from "../../static/images/Ukrainian.png";
 import russian from "../../static/images/Russian.png";
 import english from "../../static/images/English.png";
 
-import merchantPoster from "../../static/images/videoPosters/merchant.png";
-import graphicsPoster from "../../static/images/videoPosters/graphics.png";
-import abzPoster from "../../static/images/videoPosters/abz.png";
-import tmgPoster from "../../static/images/videoPosters/tmg.png";
-import architectPoster from "../../static/images/videoPosters/architect.png";
-import cameraPoster from "../../static/images/videoPosters/camera.png";
-import phonePoster from "../../static/images/videoPosters/phonebook.png";
-import kidsLikePoster from "../../static/images/videoPosters/kidslike.png";
-import jobsPoster from "../../static/images/videoPosters/jobs.png";
-import filmotekaPoster from "../../static/images/videoPosters/filmoteka.png";
-import iceCreamPoster from "../../static/images/videoPosters/icecream.png";
-
 const icons = {
   download,
   close,
+  linkedin,
+  telegram,
+  github,
+  phone,
+  email,
 };
 
 export const images = {
@@ -63,17 +61,6 @@ export const images = {
   ukrainian,
   russian,
   english,
-  Merchant: merchantPoster,
-  Graphics: graphicsPoster,
-  "Abz-task": abzPoster,
-  "TMG-task": tmgPoster,
-  Architect: architectPoster,
-  UserCamera: cameraPoster,
-  "PhoneBook & Notes": phonePoster,
-  KidsLike: kidsLikePoster,
-  "Jobs Desk": jobsPoster,
-  Filmoteka: filmotekaPoster,
-  IceCream: iceCreamPoster,
 };
 
 export type IconName = keyof typeof icons;

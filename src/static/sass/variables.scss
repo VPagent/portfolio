@@ -14,4 +14,21 @@
   --switch-purpleBoxShadow: rgba(219, 3, 248, 0.35) 0px 0px 6px 5px;
   --hover-switch-purpleBoxShadow: rgba(219, 3, 248, 0.35) 0px 0px 6px 8px;
   --orange-gradient: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  --purple-blue-gradient: linear-gradient(
+    90deg,
+    rgba(25, 21, 107, 1) 0%,
+    rgba(64, 9, 121, 0.8393951330532212) 35%,
+    rgba(18, 172, 203, 0.7385547969187676) 100%
+  );
+  --footer-gradient: linear-gradient(
+    90deg,
+    rgba(25, 21, 107, 1) 0%,
+    rgba(119, 9, 121, 0.8393951330532212) 47%,
+    rgba(18, 172, 203, 0.5928965336134453) 92%
+  );
+  --footer-secondary-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 16%,
+    rgba(240, 238, 241, 0) 100%
+  );
 }

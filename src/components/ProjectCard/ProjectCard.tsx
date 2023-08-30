@@ -16,7 +16,6 @@ const ProjectCard: FC<Props> = ({ project }) => {
   return (
     <div key={id} className={styles.cardWrapper}>
       <VideoPlayer name={name} className={styles.video} />
-      {/* <Icon className={styles.projectIcon} name={name} type="png" /> */}
       <div className={styles.textBox}>
         <a className={styles.nameLink} href={livePageLink} target="_blank">
           {name}

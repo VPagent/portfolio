@@ -1,5 +1,19 @@
 .section {
+  padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.sectionTitle {
+  margin-right: auto;
+  text-align: start;
+
+  font-family: var(--font-varela);
+  font-size: 40px;
+  font-weight: 900;
+
+  background-image: var(--purple-blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .loader {

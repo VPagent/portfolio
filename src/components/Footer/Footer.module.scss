@@ -4,5 +4,76 @@
   padding: 20px 0px;
   color: white;
 
-  background-color: gray;
+  background: var(--footer-gradient);
+}
+
+.linksBox {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.link {
+  &:not(:first-of-type) {
+    margin-left: 10px;
+  }
+
+  &:hover .icon,
+  &:focus .icon {
+    fill: white;
+  }
+}
+
+.icon {
+  width: 36px;
+  height: auto;
+
+  fill: black;
+
+  transition: fill var(--transition-duration) ease-in-out;
+}
+
+.contactsLinksBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactsLink {
+  display: flex;
+  align-items: center;
+
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+
+  &:hover .contactsIcon,
+  &:focus .contactsIcon {
+    stroke: white;
+  }
+
+  &:hover .contactsLinkText,
+  &:focus .contactsLinkText {
+    color: white;
+  }
+
+  text-decoration: none;
+}
+
+.contactsLinkText {
+  margin-left: 10px;
+  font-family: var(--font-syne);
+  font-size: 20px;
+
+  color: black;
+
+  transition: color var(--transition-duration) ease-in-out;
+}
+
+.contactsIcon {
+  width: 40px;
+  height: auto;
+
+  stroke: black;
+  transition: stroke var(--transition-duration) ease-in-out;
 }
