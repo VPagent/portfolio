@@ -1,0 +1,162 @@
+.section {
+  padding: 60px 0px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.sectionItem {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:first-of-type) {
+    margin-top: 40px;
+  }
+}
+
+.sectionTitle {
+  margin-right: auto;
+
+  text-align: start;
+  font-family: var(--font-varela);
+  font-size: 40px;
+  font-weight: 900;
+
+  background-image: var(--orange-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.workExpList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  background-color: #18181b;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+
+  position: relative;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  transition: box-shadow var(--transition-duration) ease-in-out;
+
+  &:hover {
+    box-shadow: var(--hover-purpleBoxShadow);
+  }
+}
+
+.workExpTitle {
+  text-align: start;
+  font-family: var(--font-syne);
+  font-size: 26px;
+  color: rgb(219, 152, 219);
+  text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108),
+    0 0 0.2em rgb(224, 122, 244);
+}
+
+.workExpItem {
+  padding: 20px 0px;
+
+  &:first-of-type {
+    padding-top: 0px;
+  }
+
+  &:not(:first-of-type) {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.workExpText {
+  text-align: start;
+
+  margin-top: 20px;
+  font-family: var(--font-varela);
+  font-size: 18px;
+}
+
+.workExpDuration {
+  margin-top: 10px;
+
+  text-align: start;
+  font-family: var(--font-syne);
+
+  color: var(--purple-color);
+}
+
+.educationList {
+  composes: workExpList;
+}
+
+.educationItem {
+  composes: workExpItem;
+}
+
+.educationTitle {
+  composes: workExpTitle;
+}
+
+.educationText {
+  composes: workExpText;
+}
+
+.languagesList {
+  composes: workExpList;
+}
+
+.languagesItem {
+  composes: workExpItem;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.languagesItemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.langIcon {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+
+.languagesTitle {
+  composes: workExpTitle;
+
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.languagesText {
+  margin-left: auto;
+
+  font-family: var(--font-varela);
+  font-size: 20px;
+  font-weight: 800;
+
+  color: grey;
+}

@@ -41,7 +41,7 @@ const TechSkillsSection: FC<Props> = ({ techSkills, softSkills }) => {
                 ) : (
                   <>
                     {softSkills.map((skill: any) => (
-                      <div className={styles.softSkillsCard}>
+                      <div key={skill.id} className={styles.softSkillsCard}>
                         <div className={styles.softSkillsCard__contentWrapper}>
                           <div className={styles.circle}></div>
                           <p className={styles.softSkillsText}>

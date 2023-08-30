@@ -1,0 +1,138 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background-color: #18181b;
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: box-shadow var(--transition-duration) ease-in-out,
+    opacity 500ms ease-in-out;
+
+  &:not(:first-of-type) {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    box-shadow: var(--hover-purpleBoxShadow);
+  }
+  &:hover .video {
+    transform: scale(1.1);
+  }
+
+  opacity: 0;
+
+  animation: projectCardAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes projectCardAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.video {
+  transform: scale(1.05);
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.projectIcon {
+  width: 100%;
+  height: auto;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.nameLink {
+  text-align: start;
+  text-decoration: none;
+
+  font-family: var(--font-syne);
+  font-size: 26px;
+  color: white;
+
+  transition: transform var(--transition-duration) ease-in-out,
+    color var(--transition-duration) ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.05);
+    color: rgb(212, 211, 211);
+  }
+}
+
+.techImagesBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 10px;
+}
+
+.techIcon {
+  width: 40px;
+  height: auto;
+
+  &:not(:first-of-type) {
+    margin-left: 10px;
+  }
+}
+
+.description {
+  margin-top: 10px;
+
+  text-align: start;
+
+  font-family: var(--font-varela);
+  font-size: 16px;
+  color: #979797;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.linkButton {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 14px;
+  background-color: #979797;
+  border-radius: 10px;
+
+  font-family: var(--font-syne);
+  font-size: 16px;
+  color: white;
+
+  transition: background-color var(--transition-duration) ease-in-out;
+
+  &:first-of-type {
+    margin-right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #6a6767;
+  }
+}

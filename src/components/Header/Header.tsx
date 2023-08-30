@@ -20,7 +20,11 @@ const Header: FC = () => {
         <div className={styles.headerBox}>
           <Logo />
           <div className={styles.headerControls}>
-            <Hamburger toggled={isMenuOpen} onToggle={setIsMenuOpen} />
+            <Hamburger
+              color="#8901cd"
+              toggled={isMenuOpen}
+              onToggle={setIsMenuOpen}
+            />
             {isMenuOpen && <MainMenu onClose={handleCloseMenu} />}
           </div>
         </div>

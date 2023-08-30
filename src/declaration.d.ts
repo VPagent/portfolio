@@ -14,3 +14,7 @@ declare module "*.svg" {
 declare module "*.png" {
   export default "" as string;
 }
+
+declare module "*.mp4" {
+  export default "" as string;
+}

@@ -1,9 +1,83 @@
 .menuList {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   width: 100%;
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.langButton {
+  cursor: pointer;
+
+  &:hover .langButtonText,
+  &:focus .langButtonText {
+    font-size: 22px;
+    color: white;
+  }
+}
+
+.langButtonText {
+  font-family: var(--font-varela);
+  font-size: 20px;
+  color: rgb(219, 152, 219);
+  text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108),
+    0 0 0.2em rgb(224, 122, 244);
+
+  transition: color var(--transition-duration) ease-in-out,
+    font-size var(--transition-duration) ease-in-out;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
+
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+
+  transform: scale(1);
+
+  transition: transform var(--transition-duration) ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.2);
+  }
+
+  &:hover .closeIcon,
+  &:focus .closeIcon {
+    fill: rgb(132, 97, 132);
+  }
+}
+
+.closeIcon {
+  width: 100%;
+  height: auto;
+  fill: var(--purple-color);
+
+  transition: fill var(--transition-duration) ease-in-out;
+}
+
+.border {
+  display: flex;
+  height: 1px;
+  margin-top: 10px;
+  background-color: grey;
 }
 
 .navLink {
@@ -32,4 +106,18 @@
     transform: scale(1.05);
     color: var(--purple-color);
   }
+}
+
+.themeBox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  right: 0px;
+  bottom: 0px;
+}
+
+.themeText {
+  composes: langButtonText;
+  margin-bottom: 10px;
 }

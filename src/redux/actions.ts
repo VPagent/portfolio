@@ -1,5 +1,13 @@
-import { AsyncThunkAction, createAsyncThunk } from "@reduxjs/toolkit";
-import { getSoftSkills, getSummary, getTechSkills } from "../services/http";
+import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  getEducation,
+  getLanguages,
+  getProjects,
+  getSoftSkills,
+  getSummary,
+  getTechSkills,
+  getWorkExperience,
+} from "../services/http";
 
 export const getMySummaryAction = createAsyncThunk(
   "summary",
@@ -48,3 +56,73 @@ export const getMySoftSkillsAction = createAsyncThunk(
     }
   }
 );
+
+export const getMyProjectsAction = createAsyncThunk(
+  "projects",
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      const projects = await getProjects();
+
+      return projects;
+    } catch (error: any) {
+      return rejectWithValue({
+        message: error.response.data.message,
+        status: error.response.status,
+      });
+    }
+  }
+);
+
+// education: educationReducer,
+// workExp: workExpReducer,
+// languages: languagesReducer,
+
+export const getMyEducationAction = createAsyncThunk(
+  "education",
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      const education = await getEducation();
+
+      return education;
+    } catch (error: any) {
+      return rejectWithValue({
+        message: error.response.data.message,
+        status: error.response.status,
+      });
+    }
+  }
+);
+
+export const getMyWorkExpAction = createAsyncThunk(
+  "workExp",
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      const workExp = await getWorkExperience();
+
+      return workExp;
+    } catch (error: any) {
+      return rejectWithValue({
+        message: error.response.data.message,
+        status: error.response.status,
+      });
+    }
+  }
+);
+
+export const getMyLanguagesAction = createAsyncThunk(
+  "languages",
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      const languages = await getLanguages();
+
+      return languages;
+    } catch (error: any) {
+      return rejectWithValue({
+        message: error.response.data.message,
+        status: error.response.status,
+      });
+    }
+  }
+);
+
+export const changeThemeAction = createAction("theme");

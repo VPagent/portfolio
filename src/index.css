@@ -12,12 +12,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgb(42, 49, 65);
   background: linear-gradient(
-    214deg,
-    rgba(42, 49, 65, 1) 0%,
-    rgba(9, 25, 46, 1) 59%,
-    rgba(42, 49, 65, 1) 100%
+    193deg,
+    rgba(0, 0, 0, 1) 23%,
+    rgba(30, 11, 43, 1) 50%,
+    rgba(0, 0, 0, 1) 75%
   );
   background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+#root {
   min-height: 100vh;
 }
 

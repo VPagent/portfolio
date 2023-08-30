@@ -1,18 +1,25 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { summarySliceRed } from "./slices";
-import { softSkillsReducer, techSkillsReducer } from "./reducers";
+import {
+  educationReducer,
+  languagesReducer,
+  projectsReducer,
+  softSkillsReducer,
+  techSkillsReducer,
+  themeReducer,
+  workExpReducer,
+} from "./reducers";
 
 const store = configureStore({
   reducer: {
+    theme: themeReducer,
     summary: summarySliceRed,
     techSkills: techSkillsReducer,
     softSkills: softSkillsReducer,
-    // softSkills: twoSlice.reducer,
-    // techSkills: techSkillsSlice,
-    // education: educationSkills,
-    // workExp: workExpSlice,
-    // projects: projectsReducer,
-    // languages: languagesSlice,
+    projects: projectsReducer,
+    education: educationReducer,
+    workExp: workExpReducer,
+    languages: languagesReducer,
   },
 });
 

@@ -1,0 +1,39 @@
+.switch {
+  position: relative;
+
+  display: flex;
+  width: 60px;
+  height: 30px;
+
+  background-color: transparent;
+  box-shadow: var(--switch-purpleBoxShadow);
+  border-radius: 20px;
+
+  transition: box-shadow var(--transition-duration) ease-in-out;
+
+  &:hover {
+    box-shadow: var(--hover-switch-purpleBoxShadow);
+    cursor: pointer;
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+
+  background: radial-gradient(
+    circle,
+    rgba(238, 234, 234, 0.9514399509803921) 0%,
+    rgba(137, 1, 205, 1) 100%
+  );
+  border-radius: 50%;
+
+  transition: left var(--transition-duration) ease-in-out;
+}
+
+.circle.active {
+  left: 32px;
+}
