@@ -1,0 +1,18 @@
+:global(.dark) {
+  --body-bcg: linear-gradient(
+    193deg,
+    rgba(0, 0, 0, 1) 23%,
+    rgba(30, 11, 43, 1) 50%,
+    rgba(0, 0, 0, 1) 75%
+  );
+}
+
+:global(.light) {
+  --body-bcg: linear-gradient(
+    193deg,
+    rgba(251, 251, 251, 1) 9%,
+    rgba(121, 47, 171, 0.6629245448179272) 51%,
+    rgba(255, 255, 255, 1) 77%
+  );
+  margin-top: 10px;
+}

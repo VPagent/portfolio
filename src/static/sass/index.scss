@@ -1,7 +1,8 @@
-@import "./static/sass/reset.scss";
-@import "./static/sass/variables.scss";
+@import "./reset.scss";
+@import "./variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
+@import "./themes.scss";
 
 body {
   margin: 0;
@@ -10,13 +11,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(42, 49, 65);
-  background: linear-gradient(
-    193deg,
-    rgba(0, 0, 0, 1) 23%,
-    rgba(30, 11, 43, 1) 50%,
-    rgba(0, 0, 0, 1) 75%
-  );
+  // background: linear-gradient(
+  //   193deg,
+  //   rgba(0, 0, 0, 1) 23%,
+  //   rgba(30, 11, 43, 1) 50%,
+  //   rgba(0, 0, 0, 1) 75%
+  // );
+
+  background: var(--body-bcg);
+
   background-repeat: no-repeat;
   min-height: 100vh;
 }

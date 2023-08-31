@@ -5,6 +5,7 @@ import SummarySection from "../../components/SummarySection/SummarySection";
 import TechSkillsSection from "../../components/TechSkillsSection/TechSkillsSection";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  getAppLanguageSelector,
   getEducationSelector,
   getLanguagesSelector,
   getSoftSkillsSelector,
@@ -30,6 +31,9 @@ const AboutPage: FC = () => {
   const education = useSelector(getEducationSelector);
   const workExp = useSelector(getWorkExpSelector);
   const languages = useSelector(getLanguagesSelector);
+  const appLanguage = useSelector(getAppLanguageSelector);
+
+  const summaryOnCurLang = summary[appLanguage];
 
   useEffect(() => {
     Promise.all([
@@ -49,7 +53,10 @@ const AboutPage: FC = () => {
   }, []);
   return (
     <>
-      <SummarySection summary={summary} />
+      <SummarySection
+        summary={summaryOnCurLang}
+        isLoading={summary.isLoading}
+      />
       <TechSkillsSection techSkills={techSkills} softSkills={softSkills} />
       <MyOtherInfoSection
         education={education}

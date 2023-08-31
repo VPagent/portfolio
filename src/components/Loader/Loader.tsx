@@ -13,6 +13,12 @@ const Loader: FC<Props> = ({ className }) => {
       <div
         className={cn(styles.loader_cube, styles.loader_cube__glowing)}
       ></div>
+
+      <p className={styles.loaderText}>
+        This application uses free backend hosting, so the first request can
+        take quite a long time, even up to 3 minutes{`)`} sorry for the wait
+        {`)`}
+      </p>
     </div>
   );
 };

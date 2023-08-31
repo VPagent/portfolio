@@ -3,6 +3,7 @@ import styles from "./MyOtherInfoSection.module.scss";
 import Container from "../Container/Container";
 import Loader from "../Loader/Loader";
 import Icon from "../Icon/Icon";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   education: "isLoading" | any[];
@@ -11,12 +12,14 @@ type Props = {
 };
 
 const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.contentWrapper}>
           <div className={styles.sectionItem}>
-            <h2 className={styles.sectionTitle}>My work experience</h2>
+            <h2 className={styles.sectionTitle}>{t("My work experience")}</h2>
             {workExp === "isLoading" ? (
               <Loader className={styles.loader} />
             ) : (
@@ -34,7 +37,7 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
             )}
           </div>
           <div className={styles.sectionItem}>
-            <h2 className={styles.sectionTitle}>My Education</h2>
+            <h2 className={styles.sectionTitle}>{t("My Education")}</h2>
             {education === "isLoading" ? (
               <Loader className={styles.loader} />
             ) : (
@@ -49,7 +52,7 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
             )}
           </div>
           <div className={styles.sectionItem}>
-            <h2 className={styles.sectionTitle}>My languages</h2>
+            <h2 className={styles.sectionTitle}>{t("My languages")}</h2>
             {languages === "isLoading" ? (
               <Loader className={styles.loader} />
             ) : (

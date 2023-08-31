@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { summarySliceRed } from "./slices";
 import {
+  appLanguageReducer,
   educationReducer,
   languagesReducer,
   projectsReducer,
@@ -13,6 +14,7 @@ import {
 const store = configureStore({
   reducer: {
     theme: themeReducer,
+    appLanguage: appLanguageReducer,
     summary: summarySliceRed,
     techSkills: techSkillsReducer,
     softSkills: softSkillsReducer,

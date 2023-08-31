@@ -4,6 +4,9 @@ import Container from "../Container/Container";
 import Icon from "../Icon/Icon";
 import Loader from "../Loader/Loader";
 import cn from "clsx";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { getAppLanguageSelector } from "../../redux/selectors";
 
 type Props = {
   techSkills: any;
@@ -11,11 +14,14 @@ type Props = {
 };
 
 const TechSkillsSection: FC<Props> = ({ techSkills, softSkills }) => {
+  const { t } = useTranslation();
+  const appLanguage = useSelector(getAppLanguageSelector);
+
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.contentWrapper}>
-          <h2 className={styles.sectionTitle}>My techSkills</h2>
+          <h2 className={styles.sectionTitle}>{t("My techSkills")}</h2>
           {techSkills === "isLoading" ? (
             <Loader className={styles.loader} />
           ) : (
@@ -33,7 +39,7 @@ const TechSkillsSection: FC<Props> = ({ techSkills, softSkills }) => {
                 ))}
               </div>
               <h2 className={cn(styles.sectionTitle, styles.softSkillsTitle)}>
-                My softSkills
+                {t("My softSkills")}
               </h2>
               <div className={styles.softSkillsList}>
                 {softSkills === "isLoading" ? (
@@ -45,7 +51,7 @@ const TechSkillsSection: FC<Props> = ({ techSkills, softSkills }) => {
                         <div className={styles.softSkillsCard__contentWrapper}>
                           <div className={styles.circle}></div>
                           <p className={styles.softSkillsText}>
-                            {skill.skill.eng}
+                            {skill.skill[appLanguage]}
                           </p>
                         </div>
                       </div>

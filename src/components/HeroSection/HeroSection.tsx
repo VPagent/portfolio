@@ -5,9 +5,12 @@ import Button from "../Button/Button";
 import Container from "../Container/Container";
 import DownloadCV from "../DownloadCV/DownloadCV";
 import { useNavigate } from "react-router-dom";
+import i18n from "../../I18n/I18n";
+import { useTranslation } from "react-i18next";
 
 const HeroSection: FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className={styles.heroWrapper}>
@@ -24,32 +27,33 @@ const HeroSection: FC = () => {
           <div className={styles.textWrapper}>
             <div>
               <h1 className={styles.heroTitle}>
-                Hey i'm <span className={styles.orangeSpan}>Pasha</span>
+                {t("Hey i'm ")}{" "}
+                <span className={styles.orangeSpan}>{t("Pasha")}</span>
               </h1>
             </div>
 
             <p className={styles.heroText}>
-              I am a front-end developer. I focus on HTML, CSS, SASS, JS,
-              <span className={styles.orangeSpan}>React</span>. Development,
-              practice are very important to me.
+              {t("I am a front-end developer. I focus on HTML, CSS, SASS, JS,")}{" "}
+              <span className={styles.orangeSpan}>React</span>.{" "}
+              {t("Development, practice are very important to me.")}
             </p>
           </div>
         </div>
         <Button className={styles.button} onClick={() => navigate("/about")}>
-          About me
+          {t("About me")}
         </Button>
         <div className={styles.smallInfoBox}>
           <div className={styles.smallInfoBoxItem}>
-            <p className={styles.itemTitle}>Born In</p>
-            <p className={styles.itemText}>Kyiv</p>
+            <p className={styles.itemTitle}>{t("Born In")}</p>
+            <p className={styles.itemText}>{t("Kyiv")}</p>
           </div>
           <div className={styles.smallInfoBoxItem}>
-            <p className={styles.itemTitle}>Experience</p>
-            <p className={styles.itemText}>1+ Year</p>
+            <p className={styles.itemTitle}>{t("Experience")}</p>
+            <p className={styles.itemText}>{t("1+ Year")}</p>
           </div>
           <div className={styles.smallInfoBoxItem}>
-            <p className={styles.itemTitle}>Date of Birth</p>
-            <p className={styles.itemText}>05 november 1997</p>
+            <p className={styles.itemTitle}>{t("Date of Birth")}</p>
+            <p className={styles.itemText}>{t("05 november 1997")}</p>
           </div>
         </div>
       </Container>

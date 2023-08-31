@@ -7,3 +7,4 @@ export const getWorkExpSelector = (state: any) => state.workExp;
 export const getLanguagesSelector = (state: any) => state.languages;
 
 export const getThemeSelector = (state: any) => state.theme;
+export const getAppLanguageSelector = (state: any) => state.appLanguage;

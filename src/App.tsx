@@ -2,27 +2,39 @@ import { FC, useEffect } from "react";
 import "./App.css";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
 import MainRoutes from "./components/MainRoutes/MainRoutes";
-import { STORAGE_KEY } from "./constants";
+import { LANG_STORAGE_KEY, STORAGE_KEY } from "./constants";
 import { useDispatch, useSelector } from "react-redux";
-import { changeThemeAction } from "./redux/actions";
-import { getThemeSelector } from "./redux/selectors";
+import { changeAppLanguageAction, changeThemeAction } from "./redux/actions";
+import { getAppLanguageSelector, getThemeSelector } from "./redux/selectors";
+import i18n from "./I18n/I18n";
+import Loader from "./components/Loader/Loader";
 
 const App: FC = () => {
   const dispatch = useDispatch();
   const theme = useSelector(getThemeSelector);
+  const appLanguage = useSelector(getAppLanguageSelector);
 
   const currentTheme = JSON.parse(localStorage.getItem(STORAGE_KEY) as string);
+  const currentLang = JSON.parse(
+    localStorage.getItem(LANG_STORAGE_KEY) as string
+  );
 
   useEffect(() => {
     if (!currentTheme?.length) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify("dark"));
       //@ts-ignore
       dispatch(changeThemeAction("dark"));
-      return;
     }
     if (currentTheme?.length) {
       //@ts-ignore
       dispatch(changeThemeAction(currentTheme));
+    }
+    if (!currentLang?.length) {
+      localStorage.setItem(LANG_STORAGE_KEY, JSON.stringify(appLanguage));
+    }
+    if (currentLang?.length) {
+      //@ts-ignore
+      dispatch(changeAppLanguageAction(currentLang));
     }
   }, []);
 
@@ -32,7 +44,11 @@ const App: FC = () => {
 
       document.body.className = `${theme}`;
     }
-  }, [theme]);
+    if (appLanguage?.length) {
+      i18n.changeLanguage(appLanguage);
+      localStorage.setItem(LANG_STORAGE_KEY, JSON.stringify(appLanguage));
+    }
+  }, [theme, appLanguage]);
 
   return (
     <div className="App">
