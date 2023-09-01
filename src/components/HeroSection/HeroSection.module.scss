@@ -82,7 +82,8 @@
   margin-top: 40px;
   text-align: start;
 
-  font-family: var(--font-syne);
+  // font-family: var(--font-syne);
+  font-family: var(--font-stalinist);
   color: white;
 }
 
@@ -107,11 +108,13 @@
 }
 
 .orangeSpan {
-  color: var(--purple-color);
+  // color: var(--purple-color);
+  color: var(--changeable-purple-color);
 }
 
 .heroText {
   margin-top: 20px;
+  overflow-wrap: break-word;
 
   font-size: 26px;
 
@@ -171,7 +174,8 @@
 
 .itemText {
   margin-top: 10px;
-  font-family: var(--font-varela);
+  // font-family: var(--font-varela);
+  font-family: var(--font-nunito);
   font-size: 24px;
   font-weight: 800;
 }

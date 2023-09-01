@@ -53,10 +53,7 @@ const AboutPage: FC = () => {
   }, []);
   return (
     <>
-      <SummarySection
-        summary={summaryOnCurLang}
-        isLoading={summary.isLoading}
-      />
+      <SummarySection summary={summaryOnCurLang} isLoading={summary.loading} />
       <TechSkillsSection techSkills={techSkills} softSkills={softSkills} />
       <MyOtherInfoSection
         education={education}

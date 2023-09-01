@@ -1,20 +1,11 @@
-.section {
-  // background-color: black;
-  padding: 60px 0px;
+@import "../../static/sass/mixins.scss";
 
-  // min-height: 500px;
+.section {
+  padding: 60px 0px;
 }
 
 .sectionTitle {
-  margin-right: auto;
-
-  font-family: var(--font-varela);
-  font-size: 40px;
-  font-weight: 900;
-
-  background-image: var(--orange-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include SectionTitle();
 }
 
 .contentWrapper {
@@ -39,29 +30,14 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  @include Card();
 
   width: calc((100% - 10px) / 2);
-
   margin-top: 10px;
-
-  background-color: #18181b;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
   padding: 20px;
-  border-radius: 20px;
 
-  position: relative;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
   transform: scale(1) translateY(-50%);
   opacity: 0;
-
-  transition: transform var(--transition-duration) ease-in-out,
-    opacity var(--transition-duration) ease-in-out;
 
   &:nth-child(3n) {
     flex-direction: row;
@@ -120,7 +96,8 @@
   font-family: var(--font-syne);
   font-size: 16px;
   font-weight: 500;
-  color: white;
+
+  color: var(--card-title-color);
 
   transform: scale(1);
   transition: transform var(--transition-duration) ease-in-out;
@@ -173,7 +150,8 @@
   border-radius: 18px;
 
   background-color: black;
-  background: linear-gradient(90deg, #222121 25%, #1f1d1d 40%, #181616e0 75%);
+  background: var(--soft-card-gradient);
+
   background-size: 200% 100%;
   animation: bcgAnimation 4s infinite linear;
 }
@@ -204,9 +182,10 @@
 .softSkillsText {
   flex-grow: 1;
   margin-left: 20px;
-  color: white;
+  color: var(--card-title-color);
 
   text-align: start;
   font-family: var(--font-varela);
+  font-weight: 900;
   font-size: 20px;
 }

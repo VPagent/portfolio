@@ -1,15 +1,10 @@
+@import "../../static/sass/mixins.scss";
+
 .cardWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include Card();
 
-  border-radius: 20px;
+  padding: 0px;
   overflow: hidden;
-
-  background-color: #18181b;
-  border-radius: 20px;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
 
   transition: box-shadow var(--transition-duration) ease-in-out,
     opacity 500ms ease-in-out;
@@ -18,9 +13,6 @@
     margin-top: 20px;
   }
 
-  &:hover {
-    box-shadow: var(--hover-purpleBoxShadow);
-  }
   &:hover .video {
     transform: scale(1.1);
   }
@@ -65,7 +57,7 @@
 
   font-family: var(--font-syne);
   font-size: 26px;
-  color: white;
+  color: var(--card-title-color);
 
   transition: transform var(--transition-duration) ease-in-out,
     color var(--transition-duration) ease-in-out;

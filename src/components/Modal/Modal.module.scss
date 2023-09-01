@@ -28,10 +28,11 @@
 
   border-radius: 10px;
 
-  background-color: black;
+  background-color: var(--modal-bcg-color);
 
   box-shadow: var(--purpleBoxShadow);
-  transition: box-shadow var(--transition-duration) ease-in-out;
+  transition: box-shadow var(--transition-duration) ease-in-out,
+    background-color var(--transition-duration) ease-in-out;
 
   &:hover {
     box-shadow: var(--hover-purpleBoxShadow);

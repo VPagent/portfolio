@@ -8,34 +8,49 @@
   --purple-color: #8901cd;
   --font-varela: "Varela Round", sans-serif;
   --font-syne: "Syne", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-stalinist: "Stalinist One", cursive;
   --transition-duration: 250ms;
   --purpleBoxShadow: rgba(219, 3, 248, 0.35) 0px 0px 15px;
   --hover-purpleBoxShadow: rgba(219, 3, 248, 0.35) 0px 0px 15px 5px;
   --switch-purpleBoxShadow: rgba(219, 3, 248, 0.35) 0px 0px 6px 5px;
   --hover-switch-purpleBoxShadow: rgba(219, 3, 248, 0.35) 0px 0px 6px 8px;
   --orange-gradient: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  --mix-gradient: linear-gradient(
+    48deg,
+    rgba(45, 8, 70, 1) 0%,
+    rgba(238, 43, 238, 1) 25%,
+    rgba(52, 3, 93, 1) 79%
+  );
   --purple-blue-gradient: linear-gradient(
     90deg,
     rgba(25, 21, 107, 1) 0%,
     rgba(64, 9, 121, 0.8393951330532212) 35%,
     rgba(18, 172, 203, 0.7385547969187676) 100%
   );
-  --footer-gradient: linear-gradient(
+
+  // CARD
+  --grey-card-bcg-color: #18181b;
+  --grey-card-bcg-color-light: white;
+  --grey-card-border-color: rgba(255, 255, 255, 0.1);
+
+  --card-title-dark-color: white;
+  --card-title-light-color: rgb(50, 49, 49);
+
+  --soft-card-dark-gradient: linear-gradient(
     90deg,
-    rgba(25, 21, 107, 1) 0%,
-    rgba(119, 9, 121, 0.8393951330532212) 47%,
-    rgba(18, 172, 203, 0.5928965336134453) 92%
+    #222121 25%,
+    #1f1d1d 40%,
+    #181616e0 75%
   );
-  --footer-secondary-gradient: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 16%,
-    rgba(240, 238, 241, 0) 100%
+  --soft-card-light-gradient: linear-gradient(
+    90deg,
+    #f6f2f2 25%,
+    #e090fd 40%,
+    #eeecece0 75%
   );
 
-  --body-bcg: linear-gradient(
-    193deg,
-    rgba(0, 0, 0, 1) 23%,
-    rgba(30, 11, 43, 1) 50%,
-    rgba(0, 0, 0, 1) 75%
-  );
+  // MODAL
+  --modal-bcg-color-dark: black;
+  --modal-bcg-color-light: white;
 }

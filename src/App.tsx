@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeAppLanguageAction, changeThemeAction } from "./redux/actions";
 import { getAppLanguageSelector, getThemeSelector } from "./redux/selectors";
 import i18n from "./I18n/I18n";
-import Loader from "./components/Loader/Loader";
+import "./static/sass/index.scss";
 
 const App: FC = () => {
   const dispatch = useDispatch();
@@ -42,7 +42,8 @@ const App: FC = () => {
     if (theme?.length) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(theme));
 
-      document.body.className = `${theme}`;
+      // document.body.className = `${theme}`;
+      document.body.className = theme;
     }
     if (appLanguage?.length) {
       i18n.changeLanguage(appLanguage);

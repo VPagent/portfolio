@@ -7,6 +7,7 @@ import store from "./redux/store";
 import i18n from "./I18n/I18n";
 import "./static/sass/reset.scss";
 import "./static/sass/index.scss";
+import "./static/sass/themes.scss";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

@@ -1,3 +1,5 @@
+@import "../../static/sass/mixins.scss";
+
 .section {
   padding: 60px 0px;
 }
@@ -24,39 +26,16 @@
 }
 
 .sectionTitle {
-  margin-right: auto;
-
-  text-align: start;
-  font-family: var(--font-varela);
-  font-size: 40px;
-  font-weight: 900;
-
-  background-image: var(--orange-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include SectionTitle();
 }
 
 .workExpList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  @include Card();
 
   width: 100%;
-
   margin-top: 20px;
 
-  background-color: #18181b;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 20px;
-
-  position: relative;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  color: white;
+  color: var(--card-title-color);
 
   transition: box-shadow var(--transition-duration) ease-in-out;
 
@@ -82,7 +61,7 @@
   }
 
   &:not(:first-of-type) {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgb(175, 171, 171);
   }
 }
 

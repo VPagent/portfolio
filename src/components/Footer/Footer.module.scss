@@ -29,7 +29,7 @@
   width: 36px;
   height: auto;
 
-  fill: black;
+  fill: var(--footer-text-color);
 
   transition: fill var(--transition-duration) ease-in-out;
 }
@@ -65,7 +65,7 @@
   font-family: var(--font-syne);
   font-size: 20px;
 
-  color: black;
+  color: var(--footer-text-color);
 
   transition: color var(--transition-duration) ease-in-out;
 }
@@ -74,6 +74,6 @@
   width: 40px;
   height: auto;
 
-  stroke: black;
+  stroke: var(--footer-text-color);
   transition: stroke var(--transition-duration) ease-in-out;
 }

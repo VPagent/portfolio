@@ -1,18 +1,67 @@
-:global(.dark) {
+.dark {
   --body-bcg: linear-gradient(
     193deg,
     rgba(0, 0, 0, 1) 23%,
     rgba(30, 11, 43, 1) 50%,
     rgba(0, 0, 0, 1) 75%
   );
+
+  // HERO
+  --changeable-purple-color: var(--purple-color);
+
+  // SUMMARY
+  --card-gradient: var(--orange-gradient);
+
+  // SKILLS
+  --card-bcg-color: var(--grey-card-bcg-color);
+  --card-title-color: var(--card-title-dark-color);
+  --soft-card-gradient: var(--soft-card-dark-gradient);
+
+  // FOOTER
+  --footer-gradient: linear-gradient(
+    0deg,
+    rgba(25, 21, 107, 1) 0%,
+    rgba(119, 9, 121, 0.7637648809523809) 59%,
+    rgba(52, 118, 176, 0.13071165966386555) 87%
+  );
+  --footer-text-color: rgb(207, 157, 223);
+
+  // MODAL
+
+  --modal-bcg-color: var(--modal-bcg-color-dark);
+
+  // FONTS
 }
 
-:global(.light) {
+.light {
   --body-bcg: linear-gradient(
     193deg,
-    rgba(251, 251, 251, 1) 9%,
-    rgba(121, 47, 171, 0.6629245448179272) 51%,
-    rgba(255, 255, 255, 1) 77%
+    rgba(243, 241, 245, 1) 8%,
+    rgba(83, 0, 212, 1) 51%,
+    rgba(255, 255, 255, 1) 97%
   );
-  margin-top: 10px;
+
+  // HERO
+  --changeable-purple-color: #202020;
+
+  // SUMMARY
+  --card-gradient: var(--mix-gradient);
+
+  // SKILLS
+  --card-bcg-color: var(--grey-card-bcg-color-light);
+  --card-title-color: var(--card-title-light-color);
+  --soft-card-gradient: var(--soft-card-light-gradient);
+
+  // FOOTER
+  --footer-gradient: linear-gradient(
+    0deg,
+    rgba(25, 21, 107, 1) 0%,
+    rgba(119, 9, 121, 0.8393951330532212) 47%,
+    rgba(52, 118, 176, 0) 83%
+  );
+  --footer-text-color: black;
+
+  // MODAL
+
+  --modal-bcg-color: var(--modal-bcg-color-light);
 }

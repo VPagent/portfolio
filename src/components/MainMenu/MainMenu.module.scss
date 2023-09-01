@@ -96,7 +96,7 @@
 
   font-family: var(--font-varela);
   font-size: 20px;
-  color: white;
+  color: var(--card-title-color);
 
   transition: padding var(--transition-duration) ease-in-out,
     transform var(--transition-duration) ease-in-out,
