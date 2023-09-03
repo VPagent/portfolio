@@ -42,8 +42,7 @@ const App: FC = () => {
     if (theme?.length) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(theme));
 
-      // document.body.className = `${theme}`;
-      document.body.className = theme;
+      document.body.className = `${theme} ${appLanguage}`;
     }
     if (appLanguage?.length) {
       i18n.changeLanguage(appLanguage);

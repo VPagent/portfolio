@@ -46,7 +46,7 @@
 
 .workExpTitle {
   text-align: start;
-  font-family: var(--font-syne);
+  font-family: var(--secondary-font-family);
   font-size: 26px;
   color: rgb(219, 152, 219);
   text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108),
@@ -69,7 +69,7 @@
   text-align: start;
 
   margin-top: 20px;
-  font-family: var(--font-varela);
+  font-family: var(--primary-font-family);
   font-size: 18px;
 }
 
@@ -77,7 +77,7 @@
   margin-top: 10px;
 
   text-align: start;
-  font-family: var(--font-syne);
+  font-family: var(--secondary-font-family);
 
   color: var(--purple-color);
 }
@@ -133,7 +133,7 @@
 .languagesText {
   margin-left: auto;
 
-  font-family: var(--font-varela);
+  font-family: var(--primary-font-family);
   font-size: 20px;
   font-weight: 800;
 

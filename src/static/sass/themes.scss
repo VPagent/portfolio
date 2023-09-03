@@ -65,3 +65,18 @@
 
   --modal-bcg-color: var(--modal-bcg-color-light);
 }
+
+.ukr {
+  --primary-font-family: var(--font-nunito);
+  --secondary-font-family: var(--font-russo);
+}
+
+.ru {
+  --primary-font-family: var(--font-nunito);
+  --secondary-font-family: var(--font-russo);
+}
+
+.eng {
+  --primary-font-family: var(--font-varela);
+  --secondary-font-family: var(--font-syne);
+}

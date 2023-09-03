@@ -31,7 +31,7 @@
 }
 
 .langButtonText {
-  font-family: var(--font-varela);
+  font-family: var(--primary-font-family);
   font-size: 20px;
   color: rgb(219, 152, 219);
   text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108),
@@ -94,7 +94,7 @@
   border-bottom: 2px solid var(--purple-color);
   text-decoration: none;
 
-  font-family: var(--font-varela);
+  font-family: var(--primary-font-family);
   font-size: 20px;
   color: var(--card-title-color);
 
