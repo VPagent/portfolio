@@ -51,6 +51,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+@mixin SectionDescription {
+  text-align: start;
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  color: rgb(78 58 84);
+}
+
 @mixin Card {
   position: relative;
 

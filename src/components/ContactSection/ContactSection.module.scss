@@ -1,0 +1,21 @@
+@import "../../static/sass/mixins.scss";
+
+.section {
+  padding: 80px 0px;
+}
+
+.sectionTitle {
+  @include SectionTitle();
+
+  background-image: var(--purple-blue-gradient);
+}
+
+.sectionText {
+  @include SectionDescription();
+
+  margin-top: 20px;
+}
+
+.form {
+  margin-top: 40px;
+}

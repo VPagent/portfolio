@@ -8,6 +8,7 @@ import { ReactComponent as telegram } from "../../static/icons/telegram.svg";
 import { ReactComponent as github } from "../../static/icons/github.svg";
 import { ReactComponent as phone } from "../../static/icons/phone.svg";
 import { ReactComponent as email } from "../../static/icons/email.svg";
+import { ReactComponent as check } from "../../static/icons/check.svg";
 
 import html from "../../static/images/logos/icons8-html-96.png";
 import css from "../../static/images/logos/icons8-css-100.png";
@@ -38,6 +39,7 @@ const icons = {
   github,
   phone,
   email,
+  check,
 };
 
 export const images = {

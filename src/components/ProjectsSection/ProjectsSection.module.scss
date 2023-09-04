@@ -1,28 +1,20 @@
+@import "../../static/sass/mixins.scss";
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .sectionTitle {
-  margin-right: auto;
-  text-align: start;
-
-  font-family: var(--primary-font-family);
-  font-size: 40px;
-  font-weight: 900;
+  @include SectionTitle();
 
   background-image: var(--purple-blue-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .sectionDescription {
-  margin-top: 20px;
+  @include SectionDescription();
 
-  text-align: start;
-  font-family: var(--primary-font-family);
-  font-size: 16px;
-  color: rgb(78 58 84);
+  margin-top: 20px;
 }
 
 .loader {

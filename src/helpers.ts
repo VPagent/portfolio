@@ -31,3 +31,27 @@ export const techIconsCreator = (description: string) => {
 
   return iconsNames;
 };
+
+export const userNameValidation = (name: string) => {
+  if (!name?.length || name.length < 2) {
+    return false;
+  }
+
+  return name;
+};
+
+export const userEmailValidation = (email: string) => {
+  if (!email.includes("@") || !email.includes(".") || email.length < 4) {
+    return false;
+  }
+
+  return email;
+};
+
+export const userMessageValidation = (message: string) => {
+  if (!message.length || message.length < 10) {
+    return false;
+  }
+
+  return message;
+};

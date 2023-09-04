@@ -5,9 +5,14 @@ import ContactMeForm from "../ContactMeForm/ContactMeForm";
 
 const ContactSection: FC = () => {
   return (
-    <section>
+    <section className={styles.section}>
       <Container>
-        <ContactMeForm />
+        <h2 className={styles.sectionTitle}>Contact me</h2>
+        <p className={styles.sectionText}>
+          On this page you can leave me a message about cooperation, work,
+          projects, or just other questions.
+        </p>
+        <ContactMeForm className={styles.form} />
       </Container>
     </section>
   );
