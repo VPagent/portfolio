@@ -3,18 +3,20 @@ import styles from "./ProjectCard.module.scss";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import { techIconsCreator } from "../../helpers";
 import Icon, { IconName } from "../Icon/Icon";
+import cn from "clsx";
 
 type Props = {
   project: any;
+  className?: string;
 };
 
-const ProjectCard: FC<Props> = ({ project }) => {
+const ProjectCard: FC<Props> = ({ project, className }) => {
   const { name, description, id, livePageLink, repoLink } = project;
 
   const iconNames = techIconsCreator(description);
 
   return (
-    <div key={id} className={styles.cardWrapper}>
+    <div key={id} className={cn(styles.cardWrapper, className)}>
       <VideoPlayer name={name} className={styles.video} />
       <div className={styles.textBox}>
         <a className={styles.nameLink} href={livePageLink} target="_blank">

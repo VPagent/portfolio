@@ -127,3 +127,4 @@ export const getMyLanguagesAction = createAsyncThunk(
 
 export const changeThemeAction = createAction("theme");
 export const changeAppLanguageAction = createAction("appLanguage");
+export const changeLoadingScreenAction = createAction("loadingScreen");

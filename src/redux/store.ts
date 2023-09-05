@@ -4,6 +4,7 @@ import {
   appLanguageReducer,
   educationReducer,
   languagesReducer,
+  loadingScreenReducer,
   projectsReducer,
   softSkillsReducer,
   techSkillsReducer,
@@ -22,6 +23,7 @@ const store = configureStore({
     education: educationReducer,
     workExp: workExpReducer,
     languages: languagesReducer,
+    isLoadingScreen: loadingScreenReducer,
   },
 });
 

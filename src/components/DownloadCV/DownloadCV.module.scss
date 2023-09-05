@@ -1,3 +1,5 @@
+@import "../../static/sass/animations.scss";
+
 .wrapper {
   position: relative;
 
@@ -5,6 +7,13 @@
   height: 150px;
   border-radius: 50%;
   border: 24px solid rgba(106, 103, 103, 0.454);
+
+  opacity: 0;
+  animation: opacityAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
 }
 
 .inner {

@@ -25,4 +25,20 @@
 
 .projectsList {
   margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .card:nth-child(2n) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.card {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 20px) / 2);
+    margin-bottom: 20px;
+  }
 }

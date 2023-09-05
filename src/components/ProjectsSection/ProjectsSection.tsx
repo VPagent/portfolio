@@ -26,7 +26,11 @@ const ProjectsSection: FC<Props> = ({ projects }) => {
         ) : (
           <div className={styles.projectsList}>
             {projects.map((project: any) => (
-              <ProjectCard key={project.id} project={project} />
+              <ProjectCard
+                className={styles.card}
+                key={project.id}
+                project={project}
+              />
             ))}
           </div>
         )}

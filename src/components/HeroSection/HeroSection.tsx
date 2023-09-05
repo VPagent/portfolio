@@ -24,6 +24,7 @@ const HeroSection: FC = () => {
               </div>
             </div>
           </div>
+
           <div className={styles.textWrapper}>
             <div>
               <h1 className={styles.heroTitle}>
@@ -39,21 +40,23 @@ const HeroSection: FC = () => {
             </p>
           </div>
         </div>
-        <Button className={styles.button} onClick={() => navigate("/about")}>
-          {t("About me")}
-        </Button>
-        <div className={styles.smallInfoBox}>
-          <div className={styles.smallInfoBoxItem}>
-            <p className={styles.itemTitle}>{t("Born In")}</p>
-            <p className={styles.itemText}>{t("Kyiv")}</p>
-          </div>
-          <div className={styles.smallInfoBoxItem}>
-            <p className={styles.itemTitle}>{t("Experience")}</p>
-            <p className={styles.itemText}>{t("1+ Year")}</p>
-          </div>
-          <div className={styles.smallInfoBoxItem}>
-            <p className={styles.itemTitle}>{t("Date of Birth")}</p>
-            <p className={styles.itemText}>{t("05 november 1997")}</p>
+        <div className={styles.bottomContentWrapper}>
+          <Button className={styles.button} onClick={() => navigate("/about")}>
+            {t("About me")}
+          </Button>
+          <div className={styles.smallInfoBox}>
+            <div className={styles.smallInfoBoxItem}>
+              <p className={styles.itemTitle}>{t("Born In")}</p>
+              <p className={styles.itemText}>{t("Kyiv")}</p>
+            </div>
+            <div className={styles.smallInfoBoxItem}>
+              <p className={styles.itemTitle}>{t("Experience")}</p>
+              <p className={styles.itemText}>{t("1+ Year")}</p>
+            </div>
+            <div className={styles.smallInfoBoxItem}>
+              <p className={styles.itemTitle}>{t("Date of Birth")}</p>
+              <p className={styles.itemText}>{t("05 november 1997")}</p>
+            </div>
           </div>
         </div>
       </Container>

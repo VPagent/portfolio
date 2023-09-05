@@ -1,9 +1,14 @@
 @import "../../static/sass/mixins.scss";
+@import "../../static/sass/animations.scss";
 
 .form {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 
   width: 100%;
   padding: 30px 20px 30px 20px;
@@ -26,6 +31,15 @@
   &:focus {
     box-shadow: var(--purpleBoxShadow);
   }
+
+  opacity: 0;
+  transform: translateY(-100%);
+
+  animation: topOpacityAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .formDescription {

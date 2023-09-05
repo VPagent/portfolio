@@ -1,5 +1,5 @@
 import { FC, SyntheticEvent } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./MainMenu.module.scss";
 import Modal from "../Modal";
@@ -26,6 +26,7 @@ const MainMenu: FC<Props> = ({ onClose }) => {
   const theme = useSelector(getThemeSelector);
   const appLanguage = useSelector(getAppLanguageSelector);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -41,6 +42,8 @@ const MainMenu: FC<Props> = ({ onClose }) => {
     //@ts-ignore
     dispatch(changeAppLanguageAction(event.currentTarget.name));
   };
+
+  const handleNavigate = () => {};
 
   return (
     <Modal onClose={() => onClose()}>
@@ -85,9 +88,13 @@ const MainMenu: FC<Props> = ({ onClose }) => {
       <div className={styles.border}></div>
       <div className={styles.menuBody}>
         <div className={styles.menuList}>
-          <NavLink onClick={() => onClose()} className={styles.navLink} to="/">
+          {/* <NavLink onClick={() => onClose()} className={styles.navLink} to="/">
             {t("Home")}
-          </NavLink>
+          </NavLink> */}
+          <button
+            className={styles.navLink}
+            onClick={() => navigate("/")}
+          ></button>
           <NavLink
             onClick={() => onClose()}
             className={styles.navLink}

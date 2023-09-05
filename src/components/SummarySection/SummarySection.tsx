@@ -1,10 +1,8 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import styles from "./SummarySection.module.scss";
 import Container from "../Container/Container";
 import SummarySkeleton from "../SummarySkeleton/SummarySkeleton";
-import { InitialSummary } from "../../redux/slices";
 import { useTranslation } from "react-i18next";
-import Loader from "../Loader/Loader";
 
 type Props = {
   summary: string;
@@ -18,7 +16,7 @@ const SummarySection: FC<Props> = ({ summary, isLoading }) => {
     <section className={styles.sectionWrapper}>
       <Container>
         <div className={styles.contentWrapper}>
-          <SummarySkeleton loading={isLoading}>
+          <SummarySkeleton className={styles.summaryCard} loading={isLoading}>
             {summary && <p className={styles.text}>{summary}</p>}
           </SummarySkeleton>
           <div className={styles.openToWorkBox}>

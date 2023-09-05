@@ -2,6 +2,10 @@
   font-size: 26px;
   font-family: var(--primary-font-family);
   color: rgb(100, 96, 96);
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .logoSecondPart {

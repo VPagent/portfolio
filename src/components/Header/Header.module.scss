@@ -1,5 +1,22 @@
 .header {
-  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+
+  top: 0;
+  left: 50%;
+
+  width: 100%;
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 33%,
+    rgba(0, 0, 0, 1) 45%,
+    rgba(0, 0, 0, 0.9654455532212886) 73%,
+    rgba(0, 0, 0, 0.8618040966386554) 84%,
+    rgba(0, 0, 0, 0.4640449929971989) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .headerBox {
@@ -9,4 +26,9 @@
 
   padding-top: 10px;
   padding-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

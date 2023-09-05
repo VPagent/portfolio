@@ -68,6 +68,10 @@
   animation-timing-function: ease-in-out;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 @keyframes cardAnimation {
@@ -105,7 +109,7 @@
 
 .skillsImage {
   display: block;
-  width: 90px;
+  width: 60px;
   height: auto;
 
   margin-top: 10px;

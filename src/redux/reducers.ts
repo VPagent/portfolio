@@ -1,6 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import {
   changeAppLanguageAction,
+  changeLoadingScreenAction,
   changeThemeAction,
   getMyEducationAction,
   getMyLanguagesAction,
@@ -66,10 +67,15 @@ export const languagesReducer = createReducer([], {
 
 export const themeReducer = createReducer([], {
   //@ts-ignore
-  [changeThemeAction]: (state, action) => action.payload,
+  [changeThemeAction]: (_, action) => action.payload,
 });
 
 export const appLanguageReducer = createReducer("eng", {
   //@ts-ignore
-  [changeAppLanguageAction]: (state, action) => action.payload,
+  [changeAppLanguageAction]: (_, action) => action.payload,
+});
+
+export const loadingScreenReducer = createReducer(true, {
+  //@ts-ignore
+  [changeLoadingScreenAction]: (_, action) => action.payload,
 });

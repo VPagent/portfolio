@@ -2,8 +2,11 @@ import { FC } from "react";
 import styles from "./Footer.module.scss";
 import Container from "../Container/Container";
 import Icon from "../Icon/Icon";
+import useMediaReq from "../../hooks/UseMediaReq";
+import Logo from "../Logo/Logo";
 
 const Footer: FC = () => {
+  const { isTablet } = useMediaReq();
   return (
     <footer className={styles.footer}>
       <Container>
@@ -26,28 +29,31 @@ const Footer: FC = () => {
               <p className={styles.contactsLinkText}>vpagent13@gmail.com</p>
             </a>
           </div>
-          <div className={styles.linksBox}>
-            <a
-              className={styles.link}
-              href="https://www.linkedin.com/in/pavel-voloshyn-406697228/"
-              target="_blank"
-            >
-              <Icon className={styles.icon} name="linkedin" />
-            </a>
-            <a
-              className={styles.link}
-              href="https://www.linkedin.com/in/pavel-voloshyn-406697228/"
-              target="_blank"
-            >
-              <Icon className={styles.icon} name="telegram" />
-            </a>
-            <a
-              className={styles.link}
-              href="https://www.linkedin.com/in/pavel-voloshyn-406697228/"
-              target="_blank"
-            >
-              <Icon className={styles.icon} name="github" />
-            </a>
+          <div className={styles.iconsLogoBox}>
+            {isTablet && <Logo className={styles.logo} />}
+            <div className={styles.linksBox}>
+              <a
+                className={styles.link}
+                href="https://www.linkedin.com/in/pavel-voloshyn-406697228/"
+                target="_blank"
+              >
+                <Icon className={styles.icon} name="linkedin" />
+              </a>
+              <a
+                className={styles.link}
+                href="https://t.me/pv_at"
+                target="_blank"
+              >
+                <Icon className={styles.icon} name="telegram" />
+              </a>
+              <a
+                className={styles.link}
+                href="https://github.com/VPagent"
+                target="_blank"
+              >
+                <Icon className={styles.icon} name="github" />
+              </a>
+            </div>
           </div>
         </div>
       </Container>
