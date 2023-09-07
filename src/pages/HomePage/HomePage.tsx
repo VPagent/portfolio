@@ -4,9 +4,11 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 import { useDispatch, useSelector } from "react-redux";
 import { getLoadingScreenSelector } from "../../redux/selectors";
 import { changeLoadingScreenAction } from "../../redux/actions";
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
 const HomePage: FC = () => {
   const isLoadingScreen = useSelector(getLoadingScreenSelector);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,11 +17,7 @@ const HomePage: FC = () => {
       dispatch(changeLoadingScreenAction(false));
     }
   }, []);
-  return (
-    <>
-      <HeroSection />
-    </>
-  );
+  return <>{isLoadingScreen ? <LoadingScreen /> : <HeroSection />}</>;
 };
 
 export default HomePage;

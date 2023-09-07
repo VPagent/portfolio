@@ -5,12 +5,24 @@ import Button from "../Button/Button";
 import Container from "../Container/Container";
 import DownloadCV from "../DownloadCV/DownloadCV";
 import { useNavigate } from "react-router-dom";
-import i18n from "../../I18n/I18n";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { changeLoadingScreenAction } from "../../redux/actions";
 
 const HeroSection: FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+
+  const handleNavigate = (to: string) => {
+    //@ts-ignore
+    dispatch(changeLoadingScreenAction(true));
+    setTimeout(() => {
+      //@ts-ignore
+      dispatch(changeLoadingScreenAction(false));
+      navigate(to);
+    }, 1000);
+  };
 
   return (
     <section className={styles.heroWrapper}>
@@ -41,7 +53,10 @@ const HeroSection: FC = () => {
           </div>
         </div>
         <div className={styles.bottomContentWrapper}>
-          <Button className={styles.button} onClick={() => navigate("/about")}>
+          <Button
+            className={styles.button}
+            onClick={() => handleNavigate("/about")}
+          >
             {t("About me")}
           </Button>
           <div className={styles.smallInfoBox}>

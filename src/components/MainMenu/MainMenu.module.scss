@@ -87,10 +87,14 @@
 }
 
 .navLink {
-  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  width: max-content;
   padding: 10px 0px;
 
   transform: scale(1);
+  background-color: transparent;
+  border: none;
   border-bottom: 2px solid var(--purple-color);
   text-decoration: none;
 
@@ -107,7 +111,7 @@
     transform: scale(1.05);
   }
 
-  &:global(.active) {
+  &.active {
     padding-left: 20px;
     transform: scale(1.05);
     color: var(--purple-color);

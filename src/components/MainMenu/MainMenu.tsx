@@ -15,14 +15,18 @@ import {
 } from "../../redux/selectors";
 import {
   changeAppLanguageAction,
+  changeLoadingScreenAction,
   changeThemeAction,
 } from "../../redux/actions";
 
 type Props = {
+  isOpen: boolean;
+  currentPage: string;
+  setPage: (page: string) => void;
   onClose: () => void;
 };
 
-const MainMenu: FC<Props> = ({ onClose }) => {
+const MainMenu: FC<Props> = ({ isOpen, currentPage, setPage, onClose }) => {
   const theme = useSelector(getThemeSelector);
   const appLanguage = useSelector(getAppLanguageSelector);
   const { t } = useTranslation();
@@ -43,10 +47,20 @@ const MainMenu: FC<Props> = ({ onClose }) => {
     dispatch(changeAppLanguageAction(event.currentTarget.name));
   };
 
-  const handleNavigate = () => {};
+  const handleNavigate = (to: string) => {
+    onClose();
+    //@ts-ignore
+    dispatch(changeLoadingScreenAction(true));
+    setTimeout(() => {
+      //@ts-ignore
+      dispatch(changeLoadingScreenAction(false));
+      navigate(to);
+      setPage(to.split("/")[1]);
+    }, 1000);
+  };
 
   return (
-    <Modal onClose={() => onClose()}>
+    <Modal onClose={() => onClose()} isOpen={isOpen}>
       <div className={styles.menuHeader}>
         <Button
           className={cn(
@@ -88,34 +102,44 @@ const MainMenu: FC<Props> = ({ onClose }) => {
       <div className={styles.border}></div>
       <div className={styles.menuBody}>
         <div className={styles.menuList}>
-          {/* <NavLink onClick={() => onClose()} className={styles.navLink} to="/">
-            {t("Home")}
-          </NavLink> */}
           <button
-            className={styles.navLink}
-            onClick={() => navigate("/")}
-          ></button>
-          <NavLink
-            onClick={() => onClose()}
-            className={styles.navLink}
-            to="/about"
+            className={cn(
+              styles.navLink,
+              currentPage === "home" && styles.active
+            )}
+            onClick={() => handleNavigate("/home")}
+          >
+            {" "}
+            {t("Home")}
+          </button>
+          <button
+            className={cn(
+              styles.navLink,
+              currentPage === "about" && styles.active
+            )}
+            onClick={() => handleNavigate("/about")}
           >
             {t("About me")}
-          </NavLink>
-          <NavLink
-            onClick={() => onClose()}
-            className={styles.navLink}
-            to="/projects"
+          </button>
+          <button
+            className={cn(
+              styles.navLink,
+              currentPage === "projects" && styles.active
+            )}
+            onClick={() => handleNavigate("/projects")}
           >
             {t("My projects")}
-          </NavLink>
-          <NavLink
-            onClick={() => onClose()}
-            className={styles.navLink}
-            to="/contactMe"
+          </button>
+          <button
+            className={cn(
+              styles.navLink,
+              currentPage === "contactMe" && styles.active
+            )}
+            onClick={() => handleNavigate("/contactMe")}
           >
             {t("Contact me")}
-          </NavLink>
+          </button>
+
           <div className={styles.themeBox}>
             <p className={styles.themeText}>{t("Mode")}</p>
             <Switch
