@@ -4,6 +4,11 @@ import Container from "../Container/Container";
 import ContactMeForm from "../ContactMeForm/ContactMeForm";
 
 const ContactSection: FC = () => {
+  //  const reqData = {
+  //    chat_id: CHAT_ID,
+  //    text: message,
+  //  };
+
   return (
     <section className={styles.section}>
       <Container>
