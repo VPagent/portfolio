@@ -6,6 +6,7 @@ import {
   getSoftSkills,
   getSummary,
   getTechSkills,
+  getTgKeys,
   getWorkExperience,
 } from "../services/http";
 
@@ -116,6 +117,22 @@ export const getMyLanguagesAction = createAsyncThunk(
       const languages = await getLanguages();
 
       return languages;
+    } catch (error: any) {
+      return rejectWithValue({
+        message: error.response.data.message,
+        status: error.response.status,
+      });
+    }
+  }
+);
+
+export const getTgKeysAction = createAsyncThunk(
+  "tgKeys",
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      const keys = await getTgKeys();
+
+      return keys;
     } catch (error: any) {
       return rejectWithValue({
         message: error.response.data.message,

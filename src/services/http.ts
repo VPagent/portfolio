@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL, CHAT_ID, TG_FETCH_URL } from "../constants";
+import { BASE_URL } from "../constants";
 
 export const getSummary = async () => {
   const { data } = await axios.get(`${BASE_URL}/summary`);
@@ -44,15 +44,19 @@ export const getLanguages = async () => {
 
 // TG
 
-export const sendMessage = async (message: string) => {
-  const reqData = {
-    chat_id: CHAT_ID,
-    // parse_mode: "html",
-    text: message,
-  };
+export const getTgKeys = async () => {
+  const { data } = await axios.get(`${BASE_URL}/keys`);
 
-  const { data } = await axios.post(TG_FETCH_URL, reqData);
+  return data;
+};
 
+export const sendMessage = async (reqBody: any, token: string) => {
+  const TG_URL = `https://api.telegram.org/bot${token}/sendMessage`;
+  //  const reqData = {
+  //    chat_id: CHAT_ID,
+  //    text: message,
+  //  };
+  const { data } = await axios.post(TG_URL, reqBody);
   return data;
 };
 

@@ -5,6 +5,7 @@ export const getProjectsSelector = (state: any) => state.projects;
 export const getEducationSelector = (state: any) => state.education;
 export const getWorkExpSelector = (state: any) => state.workExp;
 export const getLanguagesSelector = (state: any) => state.languages;
+export const getTgKeysSelector = (state: any) => state.tgKeys;
 
 export const getThemeSelector = (state: any) => state.theme;
 export const getAppLanguageSelector = (state: any) => state.appLanguage;

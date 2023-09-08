@@ -8,6 +8,7 @@ import {
   projectsReducer,
   softSkillsReducer,
   techSkillsReducer,
+  tgKeysReducer,
   themeReducer,
   workExpReducer,
 } from "./reducers";
@@ -24,6 +25,7 @@ const store = configureStore({
     workExp: workExpReducer,
     languages: languagesReducer,
     isLoadingScreen: loadingScreenReducer,
+    tgKeys: tgKeysReducer,
   },
 });
 

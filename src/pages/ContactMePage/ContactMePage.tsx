@@ -11,6 +11,11 @@ const ContactMePage: FC = () => {
 
   const dispatch = useDispatch();
 
+  //  const reqData = {
+  //    chat_id: CHAT_ID,
+  //    text: message,
+  //  };
+
   useEffect(() => {
     if (isLoadingScreen) {
       //@ts-ignore

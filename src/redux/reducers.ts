@@ -9,6 +9,7 @@ import {
   getMySoftSkillsAction,
   getMyTechSkillsAction,
   getMyWorkExpAction,
+  getTgKeysAction,
 } from "./actions";
 
 export const techSkillsReducer = createReducer([], {
@@ -63,6 +64,15 @@ export const languagesReducer = createReducer([], {
   [getMyLanguagesAction.fulfilled]: (_, action) => action.payload,
   //@ts-ignore
   [getMyLanguagesAction.rejected]: (_, action) => "error",
+});
+
+export const tgKeysReducer = createReducer([], {
+  //@ts-ignore
+  [getTgKeysAction.pending]: (_, action) => "isLoading",
+  //@ts-ignore
+  [getTgKeysAction.fulfilled]: (_, action) => action.payload,
+  //@ts-ignore
+  [getTgKeysAction.rejected]: (_, action) => "error",
 });
 
 export const themeReducer = createReducer([], {
