@@ -6,15 +6,10 @@ import { Turn as Hamburger } from "hamburger-react";
 import MainMenu from "../MainMenu/MainMenu";
 import useMediaReq from "../../hooks/UseMediaReq";
 import DesktopMenu from "../DesktopMenu/DesktopMenu";
-import { useParams, useSearchParams } from "react-router-dom";
 
 const Header: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDesktop } = useMediaReq();
-  const [searchParams] = useSearchParams();
-  const [currentPage, setCurrentPage] = useState("home");
-
-  console.log(currentPage);
 
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
@@ -27,19 +22,16 @@ const Header: FC = () => {
           <div className={styles.headerControls}>
             {isDesktop && <DesktopMenu />}
             {!isDesktop && (
-              <Hamburger
-                color="#8901cd"
-                toggled={isMenuOpen}
-                onToggle={setIsMenuOpen}
-              />
+              <div className={styles.menuButton}>
+                <Hamburger
+                  color="#8901cd"
+                  toggled={isMenuOpen}
+                  onToggle={setIsMenuOpen}
+                />
+              </div>
             )}
             {isMenuOpen && !isDesktop && (
-              <MainMenu
-                onClose={handleCloseMenu}
-                isOpen={isMenuOpen}
-                setPage={setCurrentPage}
-                currentPage={currentPage}
-              />
+              <MainMenu onClose={handleCloseMenu} isOpen={isMenuOpen} />
             )}
           </div>
         </div>

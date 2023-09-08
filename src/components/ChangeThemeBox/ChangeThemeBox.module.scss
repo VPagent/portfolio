@@ -1,0 +1,20 @@
+@import "../../static/sass/mixins.scss";
+
+.themeBox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  right: 20px;
+  bottom: 20px;
+}
+
+.themeText {
+  @include TextShadow();
+
+  margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    margin-right: 20px;
+  }
+}

@@ -10,7 +10,6 @@ import {
   changeLoadingScreenAction,
   getMyProjectsAction,
 } from "../../redux/actions";
-import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
 const ProjectsPage: FC = () => {
   const dispatch = useDispatch();
@@ -28,11 +27,7 @@ const ProjectsPage: FC = () => {
 
   return (
     <>
-      {isLoadingScreen ? (
-        <LoadingScreen />
-      ) : (
-        <ProjectsSection projects={projects} />
-      )}
+      <ProjectsSection projects={projects} />
     </>
   );
 };

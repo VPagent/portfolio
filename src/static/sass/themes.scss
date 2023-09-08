@@ -6,6 +6,9 @@
     rgba(0, 0, 0, 1) 75%
   );
 
+  // HEADER
+  --header-bcg: var(--header-bcg-dark);
+
   // HERO
   --changeable-purple-color: var(--purple-color);
 
@@ -40,6 +43,9 @@
     rgba(83, 0, 212, 1) 51%,
     rgba(255, 255, 255, 1) 97%
   );
+
+  // HEADER
+  --header-bcg: var(--header-bcg-light);
 
   // HERO
   --changeable-purple-color: #202020;

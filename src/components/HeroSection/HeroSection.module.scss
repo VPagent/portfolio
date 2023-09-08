@@ -39,6 +39,10 @@
     width: 300px;
     height: auto;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 350px;
+  }
 }
 
 .photoAndCvWrapper {
@@ -110,6 +114,8 @@
     width: 50%;
 
     margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -130,6 +136,14 @@
 
   &:hover {
     font-size: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+
+    &:hover {
+      font-size: 62px;
+    }
   }
 }
 
@@ -156,6 +170,13 @@
 
   &:hover {
     font-size: 28px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 40px;
+
+    &:hover {
+      font-size: 42px;
+    }
   }
 }
 
@@ -194,6 +215,10 @@
   font-family: var(--secondary-font-family);
 
   font-size: 16px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
 }
 
 .itemText {
@@ -202,4 +227,8 @@
   font-family: var(--font-nunito);
   font-size: 24px;
   font-weight: 800;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 28px;
+  }
 }

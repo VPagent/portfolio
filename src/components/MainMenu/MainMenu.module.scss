@@ -1,44 +1,9 @@
-.menuList {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 100%;
-}
+@import "../../static/sass/mixins.scss";
 
 .menuHeader {
   display: flex;
   align-items: center;
   color: white;
-}
-
-.langButton {
-  cursor: pointer;
-
-  &:hover .langButtonText,
-  &:focus .langButtonText {
-    font-size: 22px;
-    color: white;
-  }
-
-  &.active .langButtonText,
-  &.active .langButtonText {
-    font-size: 22px;
-    color: white;
-  }
-}
-
-.langButtonText {
-  font-family: var(--primary-font-family);
-  font-size: 20px;
-  color: rgb(219, 152, 219);
-  text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108),
-    0 0 0.2em rgb(224, 122, 244);
-
-  transition: color var(--transition-duration) ease-in-out,
-    font-size var(--transition-duration) ease-in-out;
 }
 
 .closeButton {
@@ -84,50 +49,4 @@
   height: 1px;
   margin-top: 10px;
   background-color: grey;
-}
-
-.navLink {
-  display: flex;
-  justify-content: flex-start;
-  width: max-content;
-  padding: 10px 0px;
-
-  transform: scale(1);
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid var(--purple-color);
-  text-decoration: none;
-
-  font-family: var(--primary-font-family);
-  font-size: 20px;
-  color: var(--card-title-color);
-
-  transition: padding var(--transition-duration) ease-in-out,
-    transform var(--transition-duration) ease-in-out,
-    color var(--transition-duration) ease-in-out;
-
-  &:hover {
-    padding-left: 20px;
-    transform: scale(1.05);
-  }
-
-  &.active {
-    padding-left: 20px;
-    transform: scale(1.05);
-    color: var(--purple-color);
-  }
-}
-
-.themeBox {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-
-  right: 0px;
-  bottom: 0px;
-}
-
-.themeText {
-  composes: langButtonText;
-  margin-bottom: 10px;
 }

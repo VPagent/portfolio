@@ -1,0 +1,60 @@
+.menuList {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.navLink {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 10px 0px;
+
+  transform: scale(1);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--purple-color);
+  text-decoration: none;
+
+  font-family: var(--primary-font-family);
+  font-size: 20px;
+  color: var(--card-title-color);
+
+  transition: padding var(--transition-duration) ease-in-out,
+    transform var(--transition-duration) ease-in-out,
+    color var(--transition-duration) ease-in-out;
+
+  &:hover {
+    padding-left: 20px;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  &.active {
+    padding-left: 20px;
+    transform: scale(1.05);
+    color: var(--purple-color);
+  }
+  @media screen and (min-width: 1200px) {
+    // min-width: none !important;
+    width: max-content;
+
+    &:not(:first-of-type) {
+      margin-left: 20px;
+    }
+
+    &:hover {
+      padding-left: 0px;
+      transform: scale(1.05);
+    }
+    &.active {
+      padding-left: 0px;
+      transform: scale(1.05);
+      color: var(--purple-color);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../static/sass/mixins.scss";
+
+.buttonsList {
+  display: flex;
+}
+
+.langButton {
+  cursor: pointer;
+
+  &:hover .langButtonText,
+  &:focus .langButtonText {
+    font-size: 22px;
+    color: white;
+  }
+
+  &.active .langButtonText,
+  &.active .langButtonText {
+    font-size: 22px;
+    color: white;
+  }
+}
+
+.langButtonText {
+  @include TextShadow();
+}

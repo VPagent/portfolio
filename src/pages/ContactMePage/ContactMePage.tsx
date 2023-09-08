@@ -18,7 +18,11 @@ const ContactMePage: FC = () => {
     }
   }, []);
 
-  return <>{isLoadingScreen ? <LoadingScreen /> : <ContactSection />}</>;
+  return (
+    <>
+      <ContactSection />
+    </>
+  );
 };
 
 export default ContactMePage;

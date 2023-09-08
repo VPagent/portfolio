@@ -209,7 +209,8 @@
     }
   }
 
-  transition: box-shadow var(--transition-duration) ease-in-out;
+  transition: box-shadow var(--transition-duration) ease-in-out,
+    background-color var(--transition-duration) ease-in-out;
 }
 
 .buttonText {
@@ -223,6 +224,8 @@
   font-family: var(--primary-font-family);
   font-size: 20px;
   color: rgb(253, 253, 252);
+
+  transition: color var(--transition-duration) ease-in-out;
 }
 
 .errorFormText {

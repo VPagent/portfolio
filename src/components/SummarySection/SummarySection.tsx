@@ -25,6 +25,23 @@ const SummarySection: FC<Props> = ({ summary, isLoading }) => {
             </h2>
           </div>
         </div>
+        <div className={styles.pageLinkBox}>
+          <a href="#techSkills" className={styles.pageLink}>
+            My tech skills
+          </a>
+          <a href="#softSkills" className={styles.pageLink}>
+            My soft skills
+          </a>
+          <a href="#workExperience" className={styles.pageLink}>
+            My work experience
+          </a>
+          <a href="#education" className={styles.pageLink}>
+            My eduction
+          </a>
+          <a href="#languages" className={styles.pageLink}>
+            My languages
+          </a>
+        </div>
       </Container>
     </section>
   );

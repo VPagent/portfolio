@@ -18,14 +18,14 @@ const TechSkillsSection: FC<Props> = ({ techSkills, softSkills }) => {
   const appLanguage = useSelector(getAppLanguageSelector);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="techSkills">
       <Container>
         <div className={styles.contentWrapper}>
-          <h2 className={styles.sectionTitle}>{t("My techSkills")}</h2>
-          {techSkills === "isLoading" ? (
-            <Loader className={styles.loader} />
-          ) : (
-            <>
+          <div className={styles.sectionItem}>
+            <h2 className={styles.sectionTitle}>{t("My techSkills")}</h2>
+            {techSkills === "isLoading" ? (
+              <Loader className={styles.loader} />
+            ) : (
               <div className={styles.cardsList}>
                 {techSkills.map((item: any) => (
                   <div key={item.id} className={styles.card}>
@@ -38,29 +38,31 @@ const TechSkillsSection: FC<Props> = ({ techSkills, softSkills }) => {
                   </div>
                 ))}
               </div>
-              <h2 className={cn(styles.sectionTitle, styles.softSkillsTitle)}>
-                {t("My softSkills")}
-              </h2>
-              <div className={styles.softSkillsList}>
-                {softSkills === "isLoading" ? (
-                  <Loader className={styles.loader} />
-                ) : (
-                  <>
-                    {softSkills.map((skill: any) => (
-                      <div key={skill.id} className={styles.softSkillsCard}>
-                        <div className={styles.softSkillsCard__contentWrapper}>
-                          <div className={styles.circle}></div>
-                          <p className={styles.softSkillsText}>
-                            {skill.skill[appLanguage]}
-                          </p>
-                        </div>
+            )}
+          </div>
+          <div className={styles.sectionItem} id="softSkills">
+            <h2 className={cn(styles.sectionTitle, styles.softSkillsTitle)}>
+              {t("My softSkills")}
+            </h2>
+            <div className={styles.softSkillsList}>
+              {softSkills === "isLoading" ? (
+                <Loader className={styles.loader} />
+              ) : (
+                <>
+                  {softSkills.map((skill: any) => (
+                    <div key={skill.id} className={styles.softSkillsCard}>
+                      <div className={styles.softSkillsCard__contentWrapper}>
+                        <div className={styles.circle}></div>
+                        <p className={styles.softSkillsText}>
+                          {skill.skill[appLanguage]}
+                        </p>
                       </div>
-                    ))}
-                  </>
-                )}
-              </div>
-            </>
-          )}
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </Container>
     </section>

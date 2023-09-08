@@ -1,0 +1,24 @@
+.menuWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+}
+
+.languageBox {
+  margin-right: 100px;
+}
+
+.themeBox {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

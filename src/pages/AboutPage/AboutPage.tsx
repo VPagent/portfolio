@@ -63,22 +63,13 @@ const AboutPage: FC = () => {
   }, []);
   return (
     <>
-      {isLoadingScreen ? (
-        <LoadingScreen />
-      ) : (
-        <>
-          <SummarySection
-            summary={summaryOnCurLang}
-            isLoading={summary.loading}
-          />
-          <TechSkillsSection techSkills={techSkills} softSkills={softSkills} />
-          <MyOtherInfoSection
-            education={education}
-            workExp={workExp}
-            languages={languages}
-          />
-        </>
-      )}
+      <SummarySection summary={summaryOnCurLang} isLoading={summary.loading} />
+      <TechSkillsSection techSkills={techSkills} softSkills={softSkills} />
+      <MyOtherInfoSection
+        education={education}
+        workExp={workExp}
+        languages={languages}
+      />
     </>
   );
 };

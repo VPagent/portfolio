@@ -8,15 +8,9 @@
   width: 100%;
   transform: translateX(-50%);
 
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 33%,
-    rgba(0, 0, 0, 1) 45%,
-    rgba(0, 0, 0, 0.9654455532212886) 73%,
-    rgba(0, 0, 0, 0.8618040966386554) 84%,
-    rgba(0, 0, 0, 0.4640449929971989) 95%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: var(--header-bcg);
+
+  transition: background var(--transition-duration) ease-in-out;
 }
 
 .headerBox {
@@ -31,4 +25,14 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+.headerControls {
+  width: 100%;
+}
+
+.menuButton {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
 }

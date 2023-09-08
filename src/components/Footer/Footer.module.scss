@@ -61,6 +61,11 @@
 .contactsLinksBox {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .contactsLink {
@@ -69,6 +74,11 @@
 
   &:not(:first-of-type) {
     margin-top: 10px;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 0px;
+      margin-left: 20px;
+    }
   }
 
   &:hover .contactsIcon,

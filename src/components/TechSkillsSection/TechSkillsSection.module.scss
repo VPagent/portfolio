@@ -6,12 +6,38 @@
 
 .sectionTitle {
   @include SectionTitle();
+
+  @media screen and (min-width: 1200px) {
+    text-align: center;
+    margin-left: auto;
+  }
 }
 
 .contentWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.sectionItem {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-of-type {
+      width: 40%;
+    }
+    &:last-of-type {
+      width: 55%;
+      padding-left: 40px;
+    }
+  }
 }
 
 .loader {
@@ -27,6 +53,9 @@
   flex-wrap: wrap;
 
   margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 10px;
+  }
 }
 
 .card {
@@ -42,8 +71,8 @@
   &:nth-child(3n) {
     flex-direction: row;
     width: 100%;
-    transform: scale(1) translateX(-50%);
-    animation: thirdCardAnimation;
+    transform: scale(1) translateX(-100%);
+    animation: leftOpacityAnimation;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-delay: 1s;
@@ -63,7 +92,7 @@
     transform: scale(1.05);
   }
 
-  animation: cardAnimation;
+  animation: topOpacityAnimation;
   animation-duration: 500ms;
   animation-timing-function: ease-in-out;
   animation-delay: 1s;
@@ -71,28 +100,6 @@
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-  }
-}
-
-@keyframes cardAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes thirdCardAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
   }
 }
 
@@ -120,6 +127,9 @@
 
 .softSkillsTitle {
   margin-top: 40px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+  }
 }
 
 .softSkillsList {
@@ -133,6 +143,8 @@
   align-items: center;
 
   border-radius: 20px;
+  opacity: 0;
+  transform: translateY(-100%);
 
   &:not(:first-of-type) {
     margin-top: 10px;
@@ -140,6 +152,12 @@
   background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
 
   pointer-events: none;
+
+  animation: topOpacityAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .softSkillsCard__contentWrapper {
@@ -190,6 +208,10 @@
 
   text-align: start;
   font-family: var(--primary-font-family);
-  font-weight: 900;
+  font-weight: 500;
   font-size: 20px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 28px;
+  }
 }

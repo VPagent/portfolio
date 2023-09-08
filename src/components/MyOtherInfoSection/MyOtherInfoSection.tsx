@@ -15,7 +15,7 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="workExperience">
       <Container>
         <div className={styles.contentWrapper}>
           <div className={styles.sectionItem}>
@@ -36,7 +36,7 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
               </div>
             )}
           </div>
-          <div className={styles.sectionItem}>
+          <div className={styles.sectionItem} id="education">
             <h2 className={styles.sectionTitle}>{t("My Education")}</h2>
             {education === "isLoading" ? (
               <Loader className={styles.loader} />
@@ -51,7 +51,7 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
               </div>
             )}
           </div>
-          <div className={styles.sectionItem}>
+          <div className={styles.sectionItem} id="languages">
             <h2 className={styles.sectionTitle}>{t("My languages")}</h2>
             {languages === "isLoading" ? (
               <Loader className={styles.loader} />

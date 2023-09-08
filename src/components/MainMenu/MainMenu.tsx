@@ -18,137 +18,28 @@ import {
   changeLoadingScreenAction,
   changeThemeAction,
 } from "../../redux/actions";
+import NavLinksList from "../NavLinksList/NavLinksList";
+import ChangeThemeBox from "../ChangeThemeBox/ChangeThemeBox";
+import ChangeLanguageBox from "../ChangeLanguageBox/ChangeLanguageBox";
 
 type Props = {
   isOpen: boolean;
-  currentPage: string;
-  setPage: (page: string) => void;
   onClose: () => void;
 };
 
-const MainMenu: FC<Props> = ({ isOpen, currentPage, setPage, onClose }) => {
-  const theme = useSelector(getThemeSelector);
-  const appLanguage = useSelector(getAppLanguageSelector);
-  const { t } = useTranslation();
-  const navigate = useNavigate();
-
-  const dispatch = useDispatch();
-
-  const handleChangeTheme = () => {
-    theme === "dark"
-      ? //@ts-ignore
-        dispatch(changeThemeAction("light"))
-      : //@ts-ignore
-        dispatch(changeThemeAction("dark"));
-  };
-
-  const handleChangeLanguage = (event: SyntheticEvent<HTMLButtonElement>) => {
-    //@ts-ignore
-    dispatch(changeAppLanguageAction(event.currentTarget.name));
-  };
-
-  const handleNavigate = (to: string) => {
-    onClose();
-    //@ts-ignore
-    dispatch(changeLoadingScreenAction(true));
-    setTimeout(() => {
-      //@ts-ignore
-      dispatch(changeLoadingScreenAction(false));
-      navigate(to);
-      setPage(to.split("/")[1]);
-    }, 1000);
-  };
-
+const MainMenu: FC<Props> = ({ isOpen, onClose }) => {
   return (
     <Modal onClose={() => onClose()} isOpen={isOpen}>
       <div className={styles.menuHeader}>
-        <Button
-          className={cn(
-            styles.langButton,
-            appLanguage === "eng" && styles.active
-          )}
-          type="icon"
-          name="eng"
-          onClick={handleChangeLanguage}
-        >
-          <p className={styles.langButtonText}>Eng</p>
-        </Button>
-        <Button
-          className={cn(
-            styles.langButton,
-            appLanguage === "ukr" && styles.active
-          )}
-          type="icon"
-          name="ukr"
-          onClick={handleChangeLanguage}
-        >
-          <p className={styles.langButtonText}>Ukr</p>
-        </Button>
-        <Button
-          className={cn(
-            styles.langButton,
-            appLanguage === "ru" && styles.active
-          )}
-          type="icon"
-          name="ru"
-          onClick={handleChangeLanguage}
-        >
-          <p className={styles.langButtonText}>Ru</p>
-        </Button>
+        <ChangeLanguageBox />
         <button className={styles.closeButton} onClick={() => onClose()}>
           <Icon name="close" className={styles.closeIcon} />
         </button>
       </div>
       <div className={styles.border}></div>
       <div className={styles.menuBody}>
-        <div className={styles.menuList}>
-          <button
-            className={cn(
-              styles.navLink,
-              currentPage === "home" && styles.active
-            )}
-            onClick={() => handleNavigate("/home")}
-          >
-            {" "}
-            {t("Home")}
-          </button>
-          <button
-            className={cn(
-              styles.navLink,
-              currentPage === "about" && styles.active
-            )}
-            onClick={() => handleNavigate("/about")}
-          >
-            {t("About me")}
-          </button>
-          <button
-            className={cn(
-              styles.navLink,
-              currentPage === "projects" && styles.active
-            )}
-            onClick={() => handleNavigate("/projects")}
-          >
-            {t("My projects")}
-          </button>
-          <button
-            className={cn(
-              styles.navLink,
-              currentPage === "contactMe" && styles.active
-            )}
-            onClick={() => handleNavigate("/contactMe")}
-          >
-            {t("Contact me")}
-          </button>
-
-          <div className={styles.themeBox}>
-            <p className={styles.themeText}>{t("Mode")}</p>
-            <Switch
-              className={styles.switch}
-              isActive={theme === "light"}
-              onChange={handleChangeTheme}
-            />
-          </div>
-        </div>
+        <NavLinksList onClose={onClose} />
+        <ChangeThemeBox />
       </div>
     </Modal>
   );

@@ -91,6 +91,7 @@ const ContactMeForm: FC<Props> = ({ className }) => {
                 onChange={handleChangeInput}
                 name="name"
                 type="text"
+                autoComplete="off"
                 min={2}
                 max={40}
               />
