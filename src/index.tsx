@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="https://vpagent.github.io/portfolio/">
         <App />
       </BrowserRouter>
     </Provider>
