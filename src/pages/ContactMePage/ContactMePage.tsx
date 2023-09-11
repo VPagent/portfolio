@@ -10,18 +10,12 @@ import {
   changeLoadingScreenAction,
   getTgKeysAction,
 } from "../../redux/actions";
-import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
 const ContactMePage: FC = () => {
   const isLoadingScreen = useSelector(getLoadingScreenSelector);
   const tgKeys = useSelector(getTgKeysSelector);
 
   const dispatch = useDispatch();
-
-  //  const reqData = {
-  //    chat_id: CHAT_ID,
-  //    text: message,
-  //  };
 
   useEffect(() => {
     if (isLoadingScreen) {

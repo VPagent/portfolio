@@ -27,7 +27,7 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
                 {workExp.map((workItem): any => (
                   <div key={workItem.id} className={styles.workExpItem}>
                     <p className={styles.workExpTitle}>{workItem.name}</p>
-                    <p className={styles.workExpText}>{workItem.decsription}</p>
+                    <p className={styles.workExpText}>{workItem.description}</p>
                     <p className={styles.workExpDuration}>
                       {workItem.duration}
                     </p>
@@ -51,6 +51,7 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
               </div>
             )}
           </div>
+
           <div className={styles.sectionItem} id="languages">
             <h2 className={styles.sectionTitle}>{t("My languages")}</h2>
             {languages === "isLoading" ? (

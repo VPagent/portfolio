@@ -2,6 +2,8 @@
 @import "../../static/sass/animations.scss";
 
 .form {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -40,6 +42,41 @@
   animation-timing-function: ease-in-out;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+}
+
+.loadingBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+
+  border-radius: 20px;
+  box-shadow: inset 10px 10px 300px 200px rgba(0, 0, 0, 0.85);
+
+  opacity: 0;
+  animation: opacityAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.loadingText {
+  @include SectionDescription();
+
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  color: white;
 }
 
 .formDescription {

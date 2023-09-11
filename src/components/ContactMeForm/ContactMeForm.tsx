@@ -7,9 +7,12 @@ import {
   userNameValidation,
 } from "../../helpers";
 import { sendMessage } from "../../services/http";
-import Loader from "../Loader/Loader";
 import FetchLoader from "../FetchLoader/FetchLoader";
 import Icon from "../Icon/Icon";
+import { useSelector } from "react-redux";
+import { getTgKeysSelector } from "../../redux/selectors";
+import Loader from "../Loader/Loader";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   className?: string;
@@ -26,6 +29,8 @@ const ContactMeForm: FC<Props> = ({ className }) => {
   const isValidMessage = userMessageValidation(userMessage);
   const isValidData =
     isValidName && isValidEmail && isValidMessage ? true : false;
+  const tgKeys = useSelector(getTgKeysSelector);
+  const { t } = useTranslation();
 
   const handleChangeInput = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -60,9 +65,14 @@ const ContactMeForm: FC<Props> = ({ className }) => {
 
     if (isValidData) {
       setIsLoading(true);
+      const reqData = {
+        chat_id: tgKeys.chat_id,
+        text: requestMessage,
+      };
+
       try {
         setTimeout(async () => {
-          const result = await sendMessage(requestMessage);
+          const result = await sendMessage(reqData, tgKeys.token);
           if (result.ok) {
             setIsLoading(false);
             handleResetForm();
@@ -79,11 +89,20 @@ const ContactMeForm: FC<Props> = ({ className }) => {
   return (
     <>
       <form action="#" className={cn(styles.form, className)}>
+        {tgKeys === "isLoading" && (
+          <div className={styles.loadingBox}>
+            <p className={styles.loadingText}>
+              {t("Private keys are loading")}
+            </p>
+            <Loader className={styles.mainLoader} />
+          </div>
+        )}
         {!isMessageSended && (
           <>
             <p className={styles.formDescription}>
-              Please leave your data and messages and it will come to me in
-              Telegram
+              {t(
+                "Please leave your data and messages and it will come to me in Telegram"
+              )}
             </p>
             <label className={cn(styles.label, userName && styles.filled)}>
               <input
@@ -95,14 +114,14 @@ const ContactMeForm: FC<Props> = ({ className }) => {
                 min={2}
                 max={40}
               />
-              <span className={styles.labelText}>Name</span>
+              <span className={styles.labelText}>{t("Name")}</span>
               <span
                 className={cn(
                   styles.errorText,
                   userName.length && !isValidName && styles.show
                 )}
               >
-                Incorrect name
+                {t("Incorrect name")}
               </span>
             </label>
             <label className={cn(styles.label, userEmail && styles.filled)}>
@@ -113,14 +132,14 @@ const ContactMeForm: FC<Props> = ({ className }) => {
                 type="text"
                 autoComplete="off"
               />
-              <span className={styles.labelText}>Email</span>
+              <span className={styles.labelText}>{t("Email")}</span>
               <span
                 className={cn(
                   styles.errorText,
                   userEmail.length && !isValidEmail && styles.show
                 )}
               >
-                Incorrect email
+                {t("Incorrect email")}
               </span>
             </label>
             <label
@@ -135,14 +154,14 @@ const ContactMeForm: FC<Props> = ({ className }) => {
                 onChange={handleChangeInput}
                 name="message"
               />
-              <span className={styles.labelText}>Message</span>
+              <span className={styles.labelText}>{t("Message")}</span>
               <span
                 className={cn(
                   styles.errorText,
                   userMessage.length && !isValidMessage && styles.show
                 )}
               >
-                Incorrect message
+                {t("Incorrect message")}
               </span>
             </label>
             <button
@@ -152,13 +171,13 @@ const ContactMeForm: FC<Props> = ({ className }) => {
               type="button"
             >
               {!isLoading ? (
-                <p className={styles.buttonText}>Send</p>
+                <p className={styles.buttonText}>{t("Send")}</p>
               ) : (
                 <FetchLoader className={styles.loader} />
               )}
             </button>
             <span className={styles.errorFormText}>
-              All fields are required
+              {t("All fields are required")}
             </span>
           </>
         )}
@@ -166,8 +185,9 @@ const ContactMeForm: FC<Props> = ({ className }) => {
           <div className={styles.sendedScreen}>
             <Icon className={styles.icon} name="check" />
             <p className={styles.screenText}>
-              Your message was successfully delivered to me, I will contact you
-              shortly, thank you
+              {t(
+                "Your message was successfully delivered to me, I will contact you shortly, thank you"
+              )}
             </p>
 
             <button
@@ -175,7 +195,7 @@ const ContactMeForm: FC<Props> = ({ className }) => {
               onClick={handleReturnToWrite}
               type="button"
             >
-              <p className={styles.screenButtonText}>Send one more</p>
+              <p className={styles.screenButtonText}>{t("Send one more")}</p>
             </button>
           </div>
         )}
