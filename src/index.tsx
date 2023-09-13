@@ -13,12 +13,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <HashRouter basename="https://VPagent.github.io/portfolio/">
-      {/* <BrowserRouter basename="https://VPagent.github.io/portfolio/"> */}
+    <BrowserRouter basename="https://VPagent.github.io/portfolio/">
       <Provider store={store}>
         <App />
       </Provider>
-      {/* </BrowserRouter> */}
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
