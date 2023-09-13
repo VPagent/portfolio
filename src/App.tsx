@@ -52,9 +52,11 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <SharedLayout>
+      {/* <SharedLayout>
         <MainRoutes />
-      </SharedLayout>
+      </SharedLayout> */}
+
+      <MainRoutes />
     </div>
   );
 };
