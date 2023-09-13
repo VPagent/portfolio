@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import "./static/sass/reset.scss";
@@ -13,10 +13,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="https://VPagent.github.io/portfolio/">
+    <HashRouter basename="https://VPagent.github.io/portfolio/">
+      {/* <BrowserRouter basename="https://VPagent.github.io/portfolio/"> */}
       <Provider store={store}>
         <App />
       </Provider>
-    </BrowserRouter>
+      {/* </BrowserRouter> */}
+    </HashRouter>
   </React.StrictMode>
 );
