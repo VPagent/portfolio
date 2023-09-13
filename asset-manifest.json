@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4c67bf2c.css",
-    "main.js": "/portfolio/static/js/main.a67ac040.js",
+    "main.css": "/portfolio/static/css/main.b0533d0a.css",
+    "main.js": "/portfolio/static/js/main.ed8d2c43.js",
     "static/css/272.657c32ba.chunk.css": "/portfolio/static/css/272.657c32ba.chunk.css",
     "static/js/272.c02d6821.chunk.js": "/portfolio/static/js/272.c02d6821.chunk.js",
     "static/css/961.7346526e.chunk.css": "/portfolio/static/css/961.7346526e.chunk.css",
@@ -39,15 +39,15 @@
     "static/media/ant.png": "/portfolio/static/media/ant.e7c709a6baae24b54f55.png",
     "static/media/github.svg": "/portfolio/static/media/github.d74b343e255edbfd229150a8a9783b2c.svg",
     "static/media/telegram.svg": "/portfolio/static/media/telegram.a250d3e22cb320e86e7acecbebec6a3e.svg",
-    "static/media/check.svg": "/portfolio/static/media/check.3d31f30a921e74f405d8171b2cefdfc8.svg",
     "index.html": "/portfolio/index.html",
+    "static/media/check.svg": "/portfolio/static/media/check.3d31f30a921e74f405d8171b2cefdfc8.svg",
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.3afa2daa2259cf69a611614d78fb2497.svg",
     "static/media/phone.svg": "/portfolio/static/media/phone.77589cf62ce25643f5db9c2a18096d09.svg",
     "static/media/email.svg": "/portfolio/static/media/email.23ba2e925aa250ac555f9378ca74aa63.svg",
     "static/media/download.svg": "/portfolio/static/media/download.4ad52c1c23c9d113acef79a233a5e9a8.svg",
     "static/media/close.svg": "/portfolio/static/media/close.f9e1fd884e38ced99e021f1ac47b347d.svg",
-    "main.4c67bf2c.css.map": "/portfolio/static/css/main.4c67bf2c.css.map",
-    "main.a67ac040.js.map": "/portfolio/static/js/main.a67ac040.js.map",
+    "main.b0533d0a.css.map": "/portfolio/static/css/main.b0533d0a.css.map",
+    "main.ed8d2c43.js.map": "/portfolio/static/js/main.ed8d2c43.js.map",
     "272.657c32ba.chunk.css.map": "/portfolio/static/css/272.657c32ba.chunk.css.map",
     "272.c02d6821.chunk.js.map": "/portfolio/static/js/272.c02d6821.chunk.js.map",
     "961.7346526e.chunk.css.map": "/portfolio/static/css/961.7346526e.chunk.css.map",
@@ -58,7 +58,7 @@
     "390.368446af.chunk.js.map": "/portfolio/static/js/390.368446af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c67bf2c.css",
-    "static/js/main.a67ac040.js"
+    "static/css/main.b0533d0a.css",
+    "static/js/main.ed8d2c43.js"
   ]
 }
