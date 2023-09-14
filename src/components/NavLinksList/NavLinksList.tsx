@@ -19,8 +19,6 @@ const NavLinksList: FC<Props> = ({ className, onClose }) => {
 
   const currentPage = pathname.split("/")[1];
 
-  console.log("location", pathname);
-
   const handleNavigate = (to: string) => {
     if (pathname === to) {
       return;
@@ -53,19 +51,13 @@ const NavLinksList: FC<Props> = ({ className, onClose }) => {
         {t("About me")}
       </button>
       <button
-        className={cn(
-          styles.navLink,
-          currentPage === "projects" && styles.active
-        )}
+        className={cn(styles.navLink, currentPage === "projects" && styles.active)}
         onClick={() => handleNavigate("/projects")}
       >
         {t("My projects")}
       </button>
       <button
-        className={cn(
-          styles.navLink,
-          currentPage === "contactMe" && styles.active
-        )}
+        className={cn(styles.navLink, currentPage === "contactMe" && styles.active)}
         onClick={() => handleNavigate("/contactMe")}
       >
         {t("Contact me")}

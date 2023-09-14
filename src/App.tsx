@@ -15,9 +15,7 @@ const App: FC = () => {
   const appLanguage = useSelector(getAppLanguageSelector);
 
   const currentTheme = JSON.parse(localStorage.getItem(STORAGE_KEY) as string);
-  const currentLang = JSON.parse(
-    localStorage.getItem(LANG_STORAGE_KEY) as string
-  );
+  const currentLang = JSON.parse(localStorage.getItem(LANG_STORAGE_KEY) as string);
 
   useEffect(() => {
     if (!currentTheme?.length) {

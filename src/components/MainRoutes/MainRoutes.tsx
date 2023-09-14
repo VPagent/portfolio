@@ -11,11 +11,13 @@ const ContactMePage = lazy(() => import("../../pages/ContactMePage"));
 const MainRoutes: FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/home" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/projects" element={<ProjectsPage />} />
-      <Route path="/contactMe" element={<ContactMePage />} />
+      <Suspense fallback={<LoadingScreen />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contactMe" element={<ContactMePage />} />
+      </Suspense>
     </Routes>
   );
 };
