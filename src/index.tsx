@@ -8,13 +8,11 @@ import "./static/sass/reset.scss";
 import "./static/sass/index.scss";
 import "./static/sass/themes.scss";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <Provider store={store}>
     <React.StrictMode>
-      <BrowserRouter basename="/portfolio/">
+      <BrowserRouter basename="/">
         <App />
       </BrowserRouter>
     </React.StrictMode>

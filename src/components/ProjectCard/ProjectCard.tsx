@@ -24,12 +24,7 @@ const ProjectCard: FC<Props> = ({ project, className }) => {
         </a>
         <div className={styles.techImagesBox}>
           {iconNames.map((iconName: any) => (
-            <Icon
-              key={iconName}
-              name={iconName}
-              type="png"
-              className={styles.techIcon}
-            />
+            <Icon key={iconName} name={iconName} type="png" className={styles.techIcon} />
           ))}
         </div>
         <p className={styles.description}>{description}</p>
@@ -37,7 +32,7 @@ const ProjectCard: FC<Props> = ({ project, className }) => {
           <a href={livePageLink} className={styles.linkButton} target="_blank">
             Live page
           </a>
-          <a href={repoLink} className={styles.linkButton} target="_blank">
+          <a href={repoLink} className={cn(styles.linkButton, !repoLink && styles.disabled)} target="_blank">
             Code
           </a>
         </div>

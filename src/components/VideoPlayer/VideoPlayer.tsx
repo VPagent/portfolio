@@ -12,6 +12,8 @@ import kidsLike from "../../static/videos/kidslike.mp4";
 import jobs from "../../static/videos/jobsdesk.mp4";
 import filmoteka from "../../static/videos/filmoteka.mp4";
 import iceCream from "../../static/videos/icecream.mp4";
+import enkoTrans from "../../static/videos/enkotrans.mp4";
+
 import merchantPoster from "../../static/images/videoPosters/merchant.png";
 import graphicsPoster from "../../static/images/videoPosters/graphics.png";
 import abzPoster from "../../static/images/videoPosters/abz.png";
@@ -23,6 +25,7 @@ import kidsLikePoster from "../../static/images/videoPosters/kidslike.png";
 import jobsPoster from "../../static/images/videoPosters/jobs.png";
 import filmotekaPoster from "../../static/images/videoPosters/filmoteka.png";
 import iceCreamPoster from "../../static/images/videoPosters/icecream.png";
+import enkoTransPoster from "../../static/images/videoPosters/enkotrans.png";
 
 const posters = {
   Merchant: merchantPoster,
@@ -36,6 +39,7 @@ const posters = {
   "Jobs Desk": jobsPoster,
   Filmoteka: filmotekaPoster,
   IceCream: iceCreamPoster,
+  "Enko trans": enkoTransPoster,
 };
 
 const videos = {
@@ -50,6 +54,7 @@ const videos = {
   "Jobs Desk": jobs,
   Filmoteka: filmoteka,
   IceCream: iceCream,
+  "Enko trans": enkoTrans,
 };
 
 type Props = {

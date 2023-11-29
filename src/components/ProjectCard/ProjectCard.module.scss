@@ -6,8 +6,7 @@
   padding: 0px;
   overflow: hidden;
 
-  transition: box-shadow var(--transition-duration) ease-in-out,
-    opacity 500ms ease-in-out;
+  transition: box-shadow var(--transition-duration) ease-in-out, opacity 500ms ease-in-out;
 
   &:not(:first-of-type) {
     margin-top: 20px;
@@ -62,8 +61,7 @@
   font-size: 26px;
   color: var(--card-title-color);
 
-  transition: transform var(--transition-duration) ease-in-out,
-    color var(--transition-duration) ease-in-out;
+  transition: transform var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
 
   &:hover,
   &:focus {
@@ -130,4 +128,10 @@
   &:focus {
     background-color: #6a6767;
   }
+}
+
+.linkButton.disabled {
+  background-color: #454545;
+  cursor: not-allowed;
+  // pointer-events: none;
 }
