@@ -1,7 +1,5 @@
 import { FC, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import LoadingScreen from "../LoadingScreen/LoadingScreen";
-import SharedLayout from "../SharedLayout/SharedLayout";
 
 const HomePage = lazy(() => import("../../pages/HomePage"));
 const AboutPage = lazy(() => import("../../pages/AboutPage"));

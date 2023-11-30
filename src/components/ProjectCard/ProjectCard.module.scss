@@ -37,6 +37,12 @@
   }
 }
 
+.videoWrapper {
+  display: flex;
+  height: 50%;
+  overflow: hidden;
+}
+
 .video {
   transform: scale(1.05);
   transition: transform var(--transition-duration) ease-in-out;

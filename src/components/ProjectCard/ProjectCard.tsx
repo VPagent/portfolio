@@ -17,7 +17,9 @@ const ProjectCard: FC<Props> = ({ project, className }) => {
 
   return (
     <div key={id} className={cn(styles.cardWrapper, className)}>
-      <VideoPlayer name={name} className={styles.video} />
+      <div className={styles.videoWrapper}>
+        <VideoPlayer name={name} className={styles.video} />
+      </div>
       <div className={styles.textBox}>
         <a className={styles.nameLink} href={livePageLink} target="_blank">
           {name}
