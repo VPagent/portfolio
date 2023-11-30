@@ -46,7 +46,6 @@ export const getLanguages = async () => {
 
 export const getTgKeys = async () => {
   const { data } = await axios.get(`${BASE_URL}/keys`);
-
   return data;
 };
 
