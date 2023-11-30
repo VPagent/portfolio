@@ -38,12 +38,15 @@
 }
 
 .videoWrapper {
-  display: flex;
   height: 50%;
+  width: 100%;
   overflow: hidden;
 }
 
 .video {
+  display: flex;
+  // height: 100%;
+  width: 100%;
   transform: scale(1.05);
   transition: transform var(--transition-duration) ease-in-out;
 }
