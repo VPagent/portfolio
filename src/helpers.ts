@@ -13,10 +13,7 @@ export const techIconsCreator = (description: string) => {
       iconsNames.push("javascript");
     }
   }
-  if (
-    lowDescription.includes("type") ||
-    lowDescription.includes("type-script")
-  ) {
+  if (lowDescription.includes("type") || lowDescription.includes("type-script")) {
     iconsNames.push("typescript");
   }
   if (lowDescription.includes("tailwind")) {
@@ -27,6 +24,9 @@ export const techIconsCreator = (description: string) => {
   }
   if (lowDescription.includes("sass") || lowDescription.includes("scss")) {
     iconsNames.push("sass");
+  }
+  if (lowDescription.includes("wordpress")) {
+    iconsNames.push("wordpress");
   }
 
   return iconsNames;

@@ -25,6 +25,8 @@ import webpack from "../../static/images/logos/icons8-webpack-128.png";
 import redux from "../../static/images/logos/icons8-redux-96.png";
 import mui from "../../static/images/logos/icons8-material-ui-96.png";
 import botstrap from "../../static/images/logos/icons8-bootstrap-96.png";
+import wordpress from "../../static/images/logos/wordpress.png";
+
 import ant from "../../static/images/logos/ant.png";
 import taillwind from "../../static/images/logos/Tailwind.png";
 import ukrainian from "../../static/images/Ukrainian.png";
@@ -63,6 +65,7 @@ export const images = {
   ukrainian,
   russian,
   english,
+  wordpress,
 };
 
 export type IconName = keyof typeof icons;
