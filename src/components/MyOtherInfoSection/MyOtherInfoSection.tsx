@@ -27,10 +27,19 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
                 {workExp.map((workItem): any => (
                   <div key={workItem.id} className={styles.workExpItem}>
                     <p className={styles.workExpTitle}>{workItem.name}</p>
-                    <p className={styles.workExpText}>{workItem.description}</p>
-                    <p className={styles.workExpDuration}>
-                      {workItem.duration}
-                    </p>
+                    <div className={styles.workExpMainBox}>
+                      <p className={styles.workExpText}>{workItem.description}</p>
+                      {workItem.links && (
+                        <div className={styles.workItemLinksBox}>
+                          {workItem.links.map((linkItem: any, index: number) => (
+                            <a key={index + 1} className={styles.workItemLink} href={linkItem.linkUrl}>
+                              {linkItem.linkTitle}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <p className={styles.workExpDuration}>{workItem.duration}</p>
                   </div>
                 ))}
               </div>
@@ -61,22 +70,11 @@ const MyOtherInfoSection: FC<Props> = ({ education, workExp, languages }) => {
                 {languages.map((languagesItem): any => (
                   <div key={languagesItem.id} className={styles.languagesItem}>
                     <div className={styles.languagesItemHeader}>
-                      <Icon
-                        name={languagesItem.title
-                          .split("-")[0]
-                          .trim()
-                          .toLowerCase()}
-                        className={styles.langIcon}
-                        type="png"
-                      />
-                      <p className={styles.languagesTitle}>
-                        {languagesItem.title.split(" -")[0]}
-                      </p>
+                      <Icon name={languagesItem.title.split("-")[0].trim().toLowerCase()} className={styles.langIcon} type="png" />
+                      <p className={styles.languagesTitle}>{languagesItem.title.split(" -")[0]}</p>
                     </div>
 
-                    <p className={styles.languagesText}>
-                      {languagesItem.title.split(" -")[1]}
-                    </p>
+                    <p className={styles.languagesText}>{languagesItem.title.split(" -")[1]}</p>
                   </div>
                 ))}
               </div>

@@ -14,16 +14,18 @@ export const engTranslations = {
 
   // HERO SECTION
   "Hey i'm ": "Hey i'm ",
-  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,":
-    "I am a front-end developer. I focus on HTML, CSS, SASS, JS,",
-  "Development, practice are very important to me.":
-    "Development, practice are very important to me.",
+  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,": "I am a front-end developer. I focus on HTML, CSS, SASS, JS,",
+  "Development, practice are very important to me.": "Development, practice are very important to me.",
   "Born In": "Born In",
   Kyiv: "Kyiv",
   Experience: "Experience",
   "1+ Year": "1+ Year",
   "Date of Birth": "Date of Birth",
   "05 november 1997": "05 november 1997",
+  "This application is adapted for correct display on different screens, mobile phones, tablets, computers":
+    "This application is adapted for correct display on different screens, mobile phones, tablets, computers",
+  "Some technologies in this application are used for DEMONSTRATION only! In this kind of application these technologies are not needed. Redux and similar":
+    "Some technologies in this application are used for DEMONSTRATION only! In this kind of application these technologies are not needed. Redux and similar",
 
   // ABOUT ME
   "I'm looking for job opportunities": "I'm looking for job opportunities",
@@ -73,16 +75,18 @@ export const ukrTranslations = {
 
   // HERO SECTION
   "Hey i'm ": "Привіт, я",
-  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,":
-    "Я фронтенд розробник. Спеціалізуюсь на HTML, CSS, SASS, JS",
-  "Development, practice are very important to me.":
-    "Розвиток та практика дуже важливі для мене.",
+  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,": "Я фронтенд розробник. Спеціалізуюсь на HTML, CSS, SASS, JS",
+  "Development, practice are very important to me.": "Розвиток та практика дуже важливі для мене.",
   "Born In": "Народився",
   Kyiv: "Київ",
   Experience: "Досвід",
   "1+ Year": "1+ Рік",
   "Date of Birth": "Дата народження",
   "05 november 1997": "05 листопада 1997",
+  "This application is adapted for correct display on different screens, mobile phones, tablets, computers":
+    "Цей додаток адаптований для коректного відображення на різних екранах, мобільних телефонах, планшетах, комп'ютерах",
+  "Some technologies in this application are used for DEMONSTRATION only! In this kind of application these technologies are not needed. Redux and similar":
+    "Деякі технології в цьому додатку використовуються лише для ДЕМОНСТРАЦІЇ! У такого типу додатку ці технології не потрібні. Redux і подібні",
 
   // ABOUT ME
   "I'm looking for job opportunities": "Я у пошуку проекту",
@@ -132,16 +136,18 @@ export const ruTranslations = {
 
   // HERO SECTION
   "Hey i'm ": "Привет, я",
-  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,":
-    "Я фронтенд разработчик. Специализируюсь на HTML, CSS, SASS, JS,",
-  "Development, practice are very important to me.":
-    "Развитие и практика очень важны для меня.",
+  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,": "Я фронтенд разработчик. Специализируюсь на HTML, CSS, SASS, JS,",
+  "Development, practice are very important to me.": "Развитие и практика очень важны для меня.",
   "Born In": "Родился в",
   Kyiv: "Киев",
   Experience: "Опыт",
   "1+ Year": "1+ Год",
   "Date of Birth": "Дата рождения",
   "05 november 1997": "05 ноября 1997",
+  "This application is adapted for correct display on different screens, mobile phones, tablets, computers":
+    "Это приложение адаптировано для корректного отображения на различных экранах мобильных телефонов, планшетов, компьютеров.",
+  "Some technologies in this application are used for DEMONSTRATION only! In this kind of application these technologies are not needed. Redux and similar":
+    "Некоторые технологии в этом приложении используются только для ДЕМОНСТРАЦИИ! В такого рода приложениях эти технологии не нужны. Redux и подобные",
 
   // ABOUT ME
   "I'm looking for job opportunities": "Открыт к предложениям по работе",

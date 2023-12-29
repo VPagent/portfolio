@@ -2,14 +2,8 @@ import { FC, useEffect } from "react";
 import styles from "./ProjectsPage.module.scss";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getLoadingScreenSelector,
-  getProjectsSelector,
-} from "../../redux/selectors";
-import {
-  changeLoadingScreenAction,
-  getMyProjectsAction,
-} from "../../redux/actions";
+import { getLoadingScreenSelector, getProjectsSelector } from "../../redux/selectors";
+import { changeLoadingScreenAction, getMyProjectsAction } from "../../redux/actions";
 
 const ProjectsPage: FC = () => {
   const dispatch = useDispatch();
@@ -17,8 +11,10 @@ const ProjectsPage: FC = () => {
   const isLoadingScreen = useSelector(getLoadingScreenSelector);
 
   useEffect(() => {
-    //@ts-ignore
-    dispatch(getMyProjectsAction());
+    if (!projects.length) {
+      //@ts-ignore
+      dispatch(getMyProjectsAction());
+    }
     if (isLoadingScreen) {
       //@ts-ignore
       dispatch(changeLoadingScreenAction(false));

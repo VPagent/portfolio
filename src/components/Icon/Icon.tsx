@@ -9,6 +9,7 @@ import { ReactComponent as github } from "../../static/icons/github.svg";
 import { ReactComponent as phone } from "../../static/icons/phone.svg";
 import { ReactComponent as email } from "../../static/icons/email.svg";
 import { ReactComponent as check } from "../../static/icons/check.svg";
+import { ReactComponent as attention } from "../../static/icons/attention.svg";
 
 import html from "../../static/images/logos/icons8-html-96.png";
 import css from "../../static/images/logos/icons8-css-100.png";
@@ -32,6 +33,7 @@ import taillwind from "../../static/images/logos/Tailwind.png";
 import ukrainian from "../../static/images/Ukrainian.png";
 import russian from "../../static/images/Russian.png";
 import english from "../../static/images/English.png";
+import screens from "../../static/images/screens.png";
 
 const icons = {
   download,
@@ -42,6 +44,7 @@ const icons = {
   phone,
   email,
   check,
+  attention,
 };
 
 export const images = {
@@ -66,6 +69,7 @@ export const images = {
   russian,
   english,
   wordpress,
+  screens,
 };
 
 export type IconName = keyof typeof icons;

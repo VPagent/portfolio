@@ -10,16 +10,9 @@ const HomePage: FC = () => {
 
   const dispatch = useDispatch();
 
-  // console.log("home");
-
   useEffect(() => {
     //@ts-ignore
     dispatch(changeLoadingScreenAction(false));
-
-    // if (isLoadingScreen) {
-    //   //@ts-ignore
-    //   dispatch(changeLoadingScreenAction(false));
-    // }
   }, []);
   return (
     <>

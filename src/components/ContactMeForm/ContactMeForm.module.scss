@@ -2,6 +2,8 @@
 @import "../../static/sass/animations.scss";
 
 .form {
+  @include TopOpacityMixin();
+
   position: relative;
 
   display: flex;
@@ -17,11 +19,7 @@
 
   border-radius: 20px;
 
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6125043767507004) 100%,
-      rgba(228, 221, 231, 0.27356880252100846) 100%
-    ),
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6125043767507004) 100%, rgba(228, 221, 231, 0.27356880252100846) 100%),
     url("../../static/images/form.jpeg");
   background-size: 100% 100%, cover;
   background-repeat: no-repeat, no-repeat;
@@ -36,15 +34,11 @@
 
   opacity: 0;
   transform: translateY(-100%);
-
-  animation: topOpacityAnimation;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 }
 
 .loadingBox {
+  @include TopOpacityMixin(opacityAnimation);
+
   position: absolute;
   top: 0;
   left: 0;
@@ -63,11 +57,6 @@
   box-shadow: inset 10px 10px 300px 200px rgba(0, 0, 0, 0.85);
 
   opacity: 0;
-  animation: opacityAnimation;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 }
 
 .loadingText {
@@ -246,8 +235,7 @@
     }
   }
 
-  transition: box-shadow var(--transition-duration) ease-in-out,
-    background-color var(--transition-duration) ease-in-out;
+  transition: box-shadow var(--transition-duration) ease-in-out, background-color var(--transition-duration) ease-in-out;
 }
 
 .buttonText {

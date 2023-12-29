@@ -49,8 +49,40 @@
   font-family: var(--secondary-font-family);
   font-size: 26px;
   color: rgb(219, 152, 219);
-  text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108),
-    0 0 0.2em rgb(224, 122, 244);
+  text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108), 0 0 0.2em rgb(224, 122, 244);
+}
+
+.workItemLinksBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  margin-top: 14px;
+}
+
+.workItemLink {
+  border-bottom: 1px solid rgb(219, 152, 219);
+  color: rgb(219, 152, 219);
+  font-family: var(--primary-font-family);
+  font-size: 18px;
+
+  transition: color var(--transition-duration) ease-in-out, border-color var(--transition-duration) ease-in-out;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: var(--purple-color);
+    border-color: var(--purple-color);
+  }
+}
+
+.workItemLink:not(:first-child) {
+  margin-left: 10px;
 }
 
 .workExpItem {

@@ -95,8 +95,7 @@
   justify-content: space-between;
 
   background-color: var(--card-bcg-color);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 20px;
 
@@ -112,9 +111,33 @@
   font-family: var(--primary-font-family);
   font-size: 20px;
   color: rgb(219, 152, 219);
-  text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108),
-    0 0 0.2em rgb(224, 122, 244);
+  text-shadow: 1px 1px 2px var(--purple-color), 0 0 1em rgb(108, 12, 108), 0 0 0.2em rgb(224, 122, 244);
 
-  transition: color var(--transition-duration) ease-in-out,
-    font-size var(--transition-duration) ease-in-out;
+  transition: color var(--transition-duration) ease-in-out, font-size var(--transition-duration) ease-in-out;
+}
+
+@mixin TopOpacityMixin($animation: topOpacityAnimation) {
+  animation: $animation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@mixin BeforeLayout {
+  opacity: 0;
+  @include TopOpacityMixin(opacityAnimation);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50px;
+    box-shadow: inset 10px 10px 0px 300px rgba(94, 93, 93, 0.202);
+  }
 }

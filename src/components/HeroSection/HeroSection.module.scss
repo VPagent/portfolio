@@ -1,4 +1,5 @@
 @import "../../static/sass/animations.scss";
+@import "../../static/sass/mixins.scss";
 
 .heroWrapper {
   padding: 80px 0px;
@@ -14,19 +15,7 @@
 
     width: 100%;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-
-      width: 100%;
-      height: 100%;
-
-      border-radius: 50px;
-      box-shadow: inset 10px 10px 0px 300px rgba(94, 93, 93, 0.202);
-    }
+    @include BeforeLayout();
   }
 }
 
@@ -120,19 +109,12 @@
 }
 
 .heroTitle {
+  @include TopOpacityMixin();
   font-size: 38px;
-  transition: opacity 250ms ease-in-out,
-    transform var(--transition-duration) ease-in-out,
-    font-size var(--transition-duration) ease-in-out;
+  transition: opacity 250ms ease-in-out, transform var(--transition-duration) ease-in-out, font-size var(--transition-duration) ease-in-out;
 
   opacity: 0;
   transform: translateY(-100%);
-
-  animation: topOpacityAnimation;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 
   &:hover {
     font-size: 40px;
@@ -152,6 +134,7 @@
 }
 
 .heroText {
+  @include TopOpacityMixin();
   margin-top: 20px;
   overflow-wrap: break-word;
 
@@ -161,12 +144,6 @@
   transform: translateY(-100%);
 
   transition: font-size var(--transition-duration) ease-in-out;
-
-  animation: topOpacityAnimation;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 
   &:hover {
     font-size: 28px;
@@ -230,5 +207,80 @@
 
   @media screen and (min-width: 1200px) {
     font-size: 28px;
+  }
+}
+
+.afterBottomContentWrapper {
+  margin-top: 60px;
+}
+
+.afterBottomContentWrapper {
+  position: relative;
+  @media screen and (min-width: 768px) {
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+
+    padding: 20px;
+
+    @include BeforeLayout();
+  }
+}
+
+.screensImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.screensTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screensText {
+  composes: itemTitle;
+  display: block;
+  margin-top: 30px;
+
+  color: white;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.lastBottomContentWrapper {
+  composes: afterBottomContentWrapper;
+
+  padding-top: 40px;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+
+    & .screensText {
+      width: 85%;
+    }
+  }
+}
+
+.attentionIcon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 20px;
+
+  fill: orange;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
   }
 }

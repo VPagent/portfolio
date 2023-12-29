@@ -60,6 +60,7 @@
 
 .card {
   @include Card();
+  @include TopOpacityMixin();
 
   width: calc((100% - 10px) / 2);
   margin-top: 10px;
@@ -69,14 +70,10 @@
   opacity: 0;
 
   &:nth-child(3n) {
+    @include TopOpacityMixin(leftOpacityAnimation);
     flex-direction: row;
     width: 100%;
     transform: scale(1) translateX(-100%);
-    animation: leftOpacityAnimation;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
 
     .skillsImage {
       margin-top: 0px;
@@ -91,12 +88,6 @@
   &:hover .skillsImage {
     transform: scale(1.05);
   }
-
-  animation: topOpacityAnimation;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -137,6 +128,8 @@
 }
 
 .softSkillsCard {
+  @include TopOpacityMixin();
+
   padding: 2px;
   display: flex;
   justify-content: center;
@@ -152,12 +145,6 @@
   background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
 
   pointer-events: none;
-
-  animation: topOpacityAnimation;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
 }
 
 .softSkillsCard__contentWrapper {
