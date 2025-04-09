@@ -64,7 +64,7 @@ const HeroSection: FC = () => {
             </div>
             <div className={styles.smallInfoBoxItem}>
               <p className={styles.itemTitle}>{t("Experience")}</p>
-              <p className={styles.itemText}>{t("1+ Year")}</p>
+              <p className={styles.itemText}>{t("2+ Year")}</p>
             </div>
             <div className={styles.smallInfoBoxItem}>
               <p className={styles.itemTitle}>{t("Date of Birth")}</p>

@@ -21,7 +21,7 @@ const DownloadCV: FC<Props> = ({ className }) => {
           </p>
         ))}
       </div>
-      <a href="https://vpagent.github.io/portfolio/assets/VoloshinPavel.pdf" download className={styles.cvLink}>
+      <a href="https://vpagent.github.io/portfolio/assets/uscv.pdf" download className={styles.cvLink}>
         <Icon name="download" className={styles.icon} />
       </a>
     </div>

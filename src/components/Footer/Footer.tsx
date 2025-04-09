@@ -14,11 +14,11 @@ const Footer: FC = () => {
           <div className={styles.contactsLinksBox}>
             <a
               className={styles.contactsLink}
-              href="tel:+380934535663"
+              href="tel:+13392286906"
               target="_blank"
             >
               <Icon className={styles.contactsIcon} name="phone" />
-              <p className={styles.contactsLinkText}>+38 093 453 56 63</p>
+              <p className={styles.contactsLinkText}>+1 339 228 6906</p>
             </a>
             <a
               className={styles.contactsLink}
