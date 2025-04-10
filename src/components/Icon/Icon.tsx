@@ -31,7 +31,7 @@ import wordpress from "../../static/images/logos/wordpress.png";
 import ant from "../../static/images/logos/ant.png";
 import taillwind from "../../static/images/logos/Tailwind.png";
 import ukrainian from "../../static/images/Ukrainian.png";
-import russian from "../../static/images/Russian.png";
+import russian from "../../static/images/russian2.png";
 import english from "../../static/images/English.png";
 import screens from "../../static/images/screens.png";
 
