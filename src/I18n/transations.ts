@@ -20,7 +20,7 @@ export const engTranslations = {
     "Development, practice are very important to me.",
   "Born In": "Born In",
   "Live In": "Live In",
-  "Lynn MA USA": "Линн МА США",
+  "Lynn MA USA": "Lynn MA USA",
   Kyiv: "Kyiv",
   Experience: "Experience",
   "1+ Year": "1+ Year",
