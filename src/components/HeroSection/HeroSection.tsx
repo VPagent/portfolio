@@ -43,24 +43,33 @@ const HeroSection: FC = () => {
           <div className={styles.textWrapper}>
             <div>
               <h1 className={styles.heroTitle}>
-                {t("Hey i'm ")} <span className={styles.orangeSpan}>{t("Pasha")}</span>
+                {t("Hey i'm ")}{" "}
+                <span className={styles.orangeSpan}>{t("Pasha")}</span>
               </h1>
             </div>
 
             <p className={styles.heroText}>
-              {t("I am a front-end developer. I focus on HTML, CSS, SASS, JS,")} <span className={styles.orangeSpan}>React</span>.{" "}
+              {t("I am a front-end developer. I focus on HTML, CSS, SASS, JS,")}{" "}
+              <span className={styles.orangeSpan}>React</span>.{" "}
               {t("Development, practice are very important to me.")}
             </p>
           </div>
         </div>
         <div className={styles.bottomContentWrapper}>
-          <Button className={styles.button} onClick={() => handleNavigate("/about")}>
+          <Button
+            className={styles.button}
+            onClick={() => handleNavigate("/about")}
+          >
             {t("About me")}
           </Button>
           <div className={styles.smallInfoBox}>
             <div className={styles.smallInfoBoxItem}>
               <p className={styles.itemTitle}>{t("Born In")}</p>
               <p className={styles.itemText}>{t("Kyiv")}</p>
+            </div>
+            <div className={styles.smallInfoBoxItem}>
+              <p className={styles.itemTitle}>{t("Live In")}</p>
+              <p className={styles.itemText}>{t("Lynn MA USA")}</p>
             </div>
             <div className={styles.smallInfoBoxItem}>
               <p className={styles.itemTitle}>{t("Experience")}</p>
@@ -74,11 +83,17 @@ const HeroSection: FC = () => {
         </div>
         <div className={styles.afterBottomContentWrapper}>
           <div className={styles.screensImageWrapper}>
-            <Icon name={testScreens} type="png" className={styles.screensImage} />
+            <Icon
+              name={testScreens}
+              type="png"
+              className={styles.screensImage}
+            />
           </div>
           <div className={styles.screensTextWrapper}>
             <p className={styles.screensText}>
-              {t("This application is adapted for correct display on different screens, mobile phones, tablets, computers")}
+              {t(
+                "This application is adapted for correct display on different screens, mobile phones, tablets, computers"
+              )}
             </p>
           </div>
         </div>

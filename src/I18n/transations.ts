@@ -14,9 +14,13 @@ export const engTranslations = {
 
   // HERO SECTION
   "Hey i'm ": "Hey i'm ",
-  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,": "I am a front-end developer. I focus on HTML, CSS, SASS, JS,",
-  "Development, practice are very important to me.": "Development, practice are very important to me.",
+  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,":
+    "I am a front-end developer. I focus on HTML, CSS, SASS, JS,",
+  "Development, practice are very important to me.":
+    "Development, practice are very important to me.",
   "Born In": "Born In",
+  "Live In": "Live In",
+  "Lynn MA USA": "Линн МА США",
   Kyiv: "Kyiv",
   Experience: "Experience",
   "1+ Year": "1+ Year",
@@ -56,7 +60,7 @@ export const engTranslations = {
   "All fields are required": "All fields are required",
   "Your message was successfully delivered to me, I will contact you shortly, thank you":
     "Your message was successfully delivered to me, I will contact you shortly, thank you",
-  "Send one more": "Send one more",
+  "Send one more": "Send one more"
 };
 
 export const ukrTranslations = {
@@ -75,9 +79,13 @@ export const ukrTranslations = {
 
   // HERO SECTION
   "Hey i'm ": "Привіт, я",
-  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,": "Я фронтенд розробник. Спеціалізуюсь на HTML, CSS, SASS, JS",
-  "Development, practice are very important to me.": "Розвиток та практика дуже важливі для мене.",
+  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,":
+    "Я фронтенд розробник. Спеціалізуюсь на HTML, CSS, SASS, JS",
+  "Development, practice are very important to me.":
+    "Розвиток та практика дуже важливі для мене.",
   "Born In": "Народився",
+  "Live In": "Мешкаю",
+  "Lynn MA USA": "Лінн МА США",
   Kyiv: "Київ",
   Experience: "Досвід",
   "1+ Year": "1+ Рік",
@@ -117,7 +125,7 @@ export const ukrTranslations = {
   "All fields are required": "Усі поля повинні бути заповненими",
   "Your message was successfully delivered to me, I will contact you shortly, thank you":
     "Ваше повідомлення доставлено мені, я зв'яжуся з вами найближчим часом, дякую",
-  "Send one more": "Надіслати ще",
+  "Send one more": "Надіслати ще"
 };
 
 export const ruTranslations = {
@@ -136,10 +144,14 @@ export const ruTranslations = {
 
   // HERO SECTION
   "Hey i'm ": "Привет, я",
-  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,": "Я фронтенд разработчик. Специализируюсь на HTML, CSS, SASS, JS,",
-  "Development, practice are very important to me.": "Развитие и практика очень важны для меня.",
+  "I am a front-end developer. I focus on HTML, CSS, SASS, JS,":
+    "Я фронтенд разработчик. Специализируюсь на HTML, CSS, SASS, JS,",
+  "Development, practice are very important to me.":
+    "Развитие и практика очень важны для меня.",
   "Born In": "Родился в",
   Kyiv: "Киев",
+  "Live In": "Проживаю",
+  "Lynn MA USA": "Линн МА США",
   Experience: "Опыт",
   "1+ Year": "1+ Год",
   "Date of Birth": "Дата рождения",
@@ -178,5 +190,5 @@ export const ruTranslations = {
   "All fields are required": "Все поля должны быть заполнены",
   "Your message was successfully delivered to me, I will contact you shortly, thank you":
     "Ваше сообщение успешно доставлено мне, я в ближайшее время с Вами свяжусь, спасибо",
-  "Send one more": "Отправить ещё одно",
+  "Send one more": "Отправить ещё одно"
 };
