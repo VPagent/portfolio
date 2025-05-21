@@ -2,6 +2,11 @@
   font-size: 26px;
   font-family: var(--primary-font-family);
   color: rgb(100, 96, 96);
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.03);
+  }
+  transition: transform var(--transition-duration) ease-in-out;
 
   @media screen and (min-width: 768px) {
     font-size: 30px;
