@@ -34,7 +34,7 @@ const Footer: FC = () => {
             <div className={styles.linksBox}>
               <a
                 className={styles.link}
-                href="https://www.linkedin.com/in/pavel-voloshyn-406697228/"
+                href="https://www.linkedin.com/in/pavlo-voloshyn-406697228/"
                 target="_blank"
               >
                 <Icon className={styles.icon} name="linkedin" />
